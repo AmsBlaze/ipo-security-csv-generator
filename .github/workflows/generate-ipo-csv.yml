@@ -1,0 +1,70 @@
+name: Generate IPO CSV
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 17 * * *"
+      timezone: "Asia/Kolkata"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ipo-csv-generation
+  cancel-in-progress: false
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate CSV
+        env:
+          UPSTOX_ACCESS_TOKEN: ${{ secrets.UPSTOX_ACCESS_TOKEN }}
+        run: python scripts/generate_csv.py
+
+      - name: Commit generated output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/
+          if git diff --cached --quiet; then
+            echo "No generated output changes."
+          else
+            git commit -m "Update IPO security CSV"
+            git push
+          fi
+
+      - name: Prepare GitHub Pages site
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp site/index.html _site/index.html
+          cp output/ipo_security_master.csv _site/ipo_security_master.csv
+          cp output/latest.json _site/latest.json
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
