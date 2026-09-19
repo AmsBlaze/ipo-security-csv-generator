@@ -1178,21 +1178,22 @@ def generate(
     # --------------------------------------------------------
 
     metadata = {
-        "generated_utc": (
-            datetime.now(
-                timezone.utc
-            ).isoformat()
-        ),
-        "generated_ist": (
-            datetime.now(
-                __import__(
-                    "zoneinfo"
-                ).ZoneInfo(
-                    "Asia/Kolkata"
-                )
-            ).isoformat()
-        ),
-        "filename": output_filename,
+    "generated_utc": (
+        datetime.now(
+            timezone.utc
+        ).isoformat()
+    ),
+    "generated_ist": (
+        datetime.now(
+            __import__(
+                "zoneinfo"
+            ).ZoneInfo(
+                "Asia/Kolkata"
+            )
+        ).isoformat()
+    ),
+    "filename": output_filename,
+    "csv_filename": output_filename,
         "ipo_count": len(rows),
         "skipped_count": len(
             flagged_ipos
