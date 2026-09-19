@@ -1,0 +1,34 @@
+{
+  "open": [
+    {
+      "id": "demo-open-ipo",
+      "symbol": "DEMOOPEN",
+      "name": "Demo Open Limited IPO",
+      "status": "open",
+      "isin": "INE000000001"
+    },
+    {
+      "id": "demo-shared-ipo",
+      "symbol": "SHARED",
+      "name": "Shared Demo Limited IPO",
+      "status": "open",
+      "isin": "INE000000002"
+    }
+  ],
+  "upcoming": [
+    {
+      "id": "demo-upcoming-ipo",
+      "symbol": "DEMOUNDER",
+      "name": "Demo Upcoming Limited IPO",
+      "status": "upcoming",
+      "isin": "INE000000003"
+    },
+    {
+      "id": "demo-shared-ipo",
+      "symbol": "SHARED",
+      "name": "Shared Demo Limited IPO",
+      "status": "upcoming",
+      "isin": "INE000000002"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IPO Security CSV Generator</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 850px; margin: 0 auto; padding: 32px 20px; line-height: 1.55;
+    }
+    .card {
+      border: 1px solid #8885; border-radius: 16px; padding: 22px; margin: 18px 0;
+    }
+    h1 { margin-bottom: 4px; }
+    .muted { opacity: .72; }
+    .button {
+      display: inline-block; padding: 11px 16px; border-radius: 10px;
+      text-decoration: none; border: 1px solid #8888; margin: 5px 5px 5px 0;
+    }
+    code { word-break: break-word; }
+  </style>
+</head>
+<body>
+  <h1>IPO Security CSV Generator</h1>
+  <p class="muted">Open + upcoming IPOs from Upstox → NSE security-master-shaped CSV.</p>
+
+  <div class="card">
+    <h2>Latest generated CSV</h2>
+    <p id="status">Loading metadata…</p>
+    <a class="button" href="./ipo_security_master.csv" download>Download CSV</a>
+  </div>
+
+  <div class="card">
+    <h2>How it works</h2>
+    <ul>
+      <li>Fetches all <code>open</code> and <code>upcoming</code> IPOs from Upstox.</li>
+      <li>Creates one row per IPO.</li>
+      <li>Changes only <code>FinInstrmId</code>, <code>TckrSymb</code>, <code>FinInstrmNm</code>, and <code>ISIN</code>.</li>
+      <li>All other values come from the template row.</li>
+      <li><code>FinInstrmId</code> is a unique random 6-digit number within each generated CSV.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Run manually</h2>
+    <p>
+      The secure manual trigger is kept inside GitHub Actions so the Upstox token
+      never reaches this public website.
+    </p>
+    <p>Open the repository's <b>Actions → Generate IPO CSV → Run workflow</b>.</p>
+  </div>
+
+  <script>
+    fetch("./latest.json", { cache: "no-store" })
+      .then(r => r.json())
+      .then(m => {
+        const d = new Date(m.generated_utc);
+        document.getElementById("status").textContent =
+          `${m.ipo_count} IPO row(s) • Generated ${d.toLocaleString("en-IN")}`;
+      })
+      .catch(() => {
+        document.getElementById("status").textContent =
+          "Latest metadata is not available yet. Run the workflow once.";
+      });
+  </script>
+</body>
+</html>
