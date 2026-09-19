@@ -1,7 +1,8 @@
 {
-  "generated_utc": "2026-09-19T13:47:59.211474+00:00",
-  "generated_ist": "2026-09-19T19:17:59.211483+05:30",
+  "generated_utc": "2026-09-19T13:56:12.870621+00:00",
+  "generated_ist": "2026-09-19T19:26:12.870629+05:30",
   "filename": "NSE_CM_security_19092026.csv",
+  "csv_filename": "NSE_CM_security_19092026.csv",
   "ipo_count": 10,
   "skipped_count": 28,
   "statuses": [
