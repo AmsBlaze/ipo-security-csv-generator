@@ -5,65 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IPO Security CSV Generator</title>
   <style>
-    :root { color-scheme: light dark; }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 850px; margin: 0 auto; padding: 32px 20px; line-height: 1.55;
-    }
-    .card {
-      border: 1px solid #8885; border-radius: 16px; padding: 22px; margin: 18px 0;
-    }
-    h1 { margin-bottom: 4px; }
-    .muted { opacity: .72; }
-    .button {
-      display: inline-block; padding: 11px 16px; border-radius: 10px;
-      text-decoration: none; border: 1px solid #8888; margin: 5px 5px 5px 0;
-    }
-    code { word-break: break-word; }
+    :root { color-scheme: light; font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif; }
+    body { margin: 0; background: #f5f7fb; color: #152033; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 20px 56px; }
+    header { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; margin-bottom:24px; }
+    h1 { margin:0 0 6px; font-size:28px; }
+    p { color:#596579; margin:0; }
+    .actions { display:flex; gap:10px; flex-wrap:wrap; }
+    a.btn { text-decoration:none; display:inline-block; padding:11px 16px; border-radius:10px; font-weight:700; border:1px solid #cfd7e6; background:white; color:#16315c; }
+    a.primary { background:#16315c; color:#fff; border-color:#16315c; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:18px; }
+    .card { background:white; border:1px solid #e0e6ef; border-radius:14px; padding:18px; }
+    .label { color:#667085; font-size:13px; margin-bottom:7px; }
+    .value { font-size:24px; font-weight:800; }
+    .table-wrap { background:white; border:1px solid #e0e6ef; border-radius:14px; overflow:auto; }
+    table { width:100%; border-collapse:collapse; min-width:900px; }
+    th, td { padding:13px 14px; border-bottom:1px solid #edf0f5; text-align:left; font-size:14px; }
+    th { background:#f9fafc; color:#586174; font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+    tr:last-child td { border-bottom:none; }
+    .badge { display:inline-block; padding:4px 8px; border-radius:999px; font-weight:700; font-size:12px; text-transform:capitalize; background:#eef2f7; }
+    .open { background:#e9f7ef; color:#17683a; }
+    .upcoming { background:#fff4dd; color:#8a5b00; }
+    .status { margin:14px 0; color:#667085; }
+    .empty { padding:36px; text-align:center; color:#667085; }
+    footer { margin-top:18px; color:#7a8495; font-size:13px; }
+    @media (max-width:760px) { header { flex-direction:column; } .cards { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
-  <h1>IPO Security CSV Generator</h1>
-  <p class="muted">Open + upcoming IPOs from Upstox → NSE security-master-shaped CSV.</p>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>IPO Security CSV Generator</h1>
+      <p>Only IPOs with complete NSE security details are shown.</p>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/AmsBlaze/ipo-security-csv-generator/actions/workflows/generate-ipo-csv.yml" target="_blank" rel="noopener">Run Generation Job</a>
+      <a class="btn" id="download" href="#" download>Download Latest CSV</a>
+    </div>
+  </header>
 
-  <div class="card">
-    <h2>Latest generated CSV</h2>
-    <p id="status">Loading metadata…</p>
-    <a class="button" href="./ipo_security_master.csv" download>Download CSV</a>
+  <div class="cards">
+    <div class="card"><div class="label">Complete IPOs</div><div class="value" id="count">—</div></div>
+    <div class="card"><div class="label">Open</div><div class="value" id="openCount">—</div></div>
+    <div class="card"><div class="label">Upcoming</div><div class="value" id="upcomingCount">—</div></div>
   </div>
 
-  <div class="card">
-    <h2>How it works</h2>
-    <ul>
-      <li>Fetches all <code>open</code> and <code>upcoming</code> IPOs from Upstox.</li>
-      <li>Creates one row per IPO.</li>
-      <li>Changes only <code>FinInstrmId</code>, <code>TckrSymb</code>, <code>FinInstrmNm</code>, and <code>ISIN</code>.</li>
-      <li>All other values come from the template row.</li>
-      <li><code>FinInstrmId</code> is a unique random 6-digit number within each generated CSV.</li>
-    </ul>
+  <div class="status" id="meta">Loading latest run…</div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>IPO</th>
+          <th>Status</th>
+          <th>Ticker</th>
+          <th>FinInstrmNm</th>
+          <th>ISIN</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="empty" id="empty" hidden>No complete IPOs are currently available.</div>
   </div>
 
-  <div class="card">
-    <h2>Run manually</h2>
-    <p>
-      The secure manual trigger is kept inside GitHub Actions so the Upstox token
-      never reaches this public website.
-    </p>
-    <p>Open the repository's <b>Actions → Generate IPO CSV → Run workflow</b>.</p>
-  </div>
+  <footer>
+    The generation job includes both <strong>open</strong> and <strong>upcoming</strong> IPOs. Incomplete records are omitted from the downloadable CSV.
+  </footer>
+</div>
+<script>
+(async () => {
+  const meta = document.getElementById('meta');
+  const rows = document.getElementById('rows');
+  const empty = document.getElementById('empty');
+  try {
+    const response = await fetch(`latest.json?t=${Date.now()}`, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    const items = Array.isArray(data.complete_ipos) ? data.complete_ipos : [];
+    document.getElementById('count').textContent = items.length;
+    document.getElementById('openCount').textContent = items.filter(x => x.status === 'open').length;
+    document.getElementById('upcomingCount').textContent = items.filter(x => x.status === 'upcoming').length;
+    meta.textContent = `Generated ${data.generated_date_ddmmyyyy || ''} • ${data.csv_filename || ''}`;
+    const download = document.getElementById('download');
+    if (data.csv_filename) {
+      download.href = data.csv_filename;
+      download.download = data.csv_filename;
+    } else {
+      download.style.display = 'none';
+    }
+    items.forEach(item => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${escapeHtml(item.ipo_name || '—')}</td>
+        <td><span class="badge ${escapeHtml(item.status || '')}">${escapeHtml(item.status || '—')}</span></td>
+        <td>${escapeHtml(item.symbol || '—')}</td>
+        <td>${escapeHtml(item.instrument_name || '—')}</td>
+        <td>${escapeHtml(item.isin || '—')}</td>`;
+      rows.appendChild(tr);
+    });
+    if (!items.length) empty.hidden = false;
+  } catch (error) {
+    meta.textContent = `Could not load latest run: ${error.message}`;
+    empty.hidden = false;
+  }
+})();
 
-  <script>
-    fetch("./latest.json", { cache: "no-store" })
-      .then(r => r.json())
-      .then(m => {
-        const d = new Date(m.generated_utc);
-        document.getElementById("status").textContent =
-          `${m.ipo_count} IPO row(s) • Generated ${d.toLocaleString("en-IN")}`;
-      })
-      .catch(() => {
-        document.getElementById("status").textContent =
-          "Latest metadata is not available yet. Run the workflow once.";
-      });
-  </script>
+function escapeHtml(value) {
+  return String(value).replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+}
+</script>
 </body>
 </html>
