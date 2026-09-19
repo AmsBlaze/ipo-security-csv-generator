@@ -1,17 +1,29 @@
 #!/usr/bin/env python3
 
 """
-Generate an NSE-security-master-shaped CSV from the fixed template row.
+IPO Security CSV Generator
+
+Fetches all OPEN and UPCOMING IPOs from Upstox and creates
+an NSE-security-master-shaped CSV using row 2 of the template.
+
+Rules:
+- Only OPEN and UPCOMING IPOs are considered.
+- IPOs missing symbol/ISIN after Upstox detail lookup are skipped.
+- Missing IPOs do NOT stop the generation job.
+- FinInstrmId is a unique random 6-digit number.
+- TckrSymb comes from Upstox symbol.
+- ISIN comes from Upstox ISIN.
+- FinInstrmNm comes from the Upstox company/security name,
+  with a trailing "IPO" removed.
+- Every other template field is copied unchanged.
+- Output filename:
+    NSE_CM_security_DDMMYYYY.csv
 
 Real mode:
     UPSTOX_ACCESS_TOKEN=... python scripts/generate_csv.py
 
 Mock mode:
     python scripts/generate_csv.py --mock tests/mock_upstox.json
-
-Output:
-    output/NSE_CM_security_DDMMYYYY.csv
-    output/latest.json
 """
 
 from __future__ import annotations
@@ -28,6 +40,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import NoReturn
+from zoneinfo import ZoneInfo
 
 
 # ============================================================
@@ -65,7 +78,8 @@ STATUSES = (
 # TEMPLATE COLUMNS
 # ============================================================
 
-# These are the ONLY template fields that are changed.
+# These are the ONLY four columns modified
+# in the generated CSV.
 REQUIRED_REPLACEMENTS = (
     "FinInstrmId",
     "TckrSymb",
@@ -74,8 +88,8 @@ REQUIRED_REPLACEMENTS = (
 )
 
 
-# These are the fields we require from Upstox
-# before an IPO can become a generated row.
+# Required fields from Upstox before an IPO
+# can be included in the CSV.
 REQUIRED_IPO_FIELDS = (
     "symbol",
     "name",
@@ -84,16 +98,10 @@ REQUIRED_IPO_FIELDS = (
 
 
 # ============================================================
-# ERROR HANDLING
+# FATAL ERROR
 # ============================================================
 
 def fail(message: str) -> NoReturn:
-    """
-    Stop the workflow for a genuine fatal error.
-
-    Missing data for an individual IPO is NOT fatal.
-    Such IPOs are handled separately and skipped.
-    """
     print(
         f"ERROR: {message}",
         file=sys.stderr,
@@ -102,14 +110,14 @@ def fail(message: str) -> NoReturn:
 
 
 # ============================================================
-# TEMPLATE
+# LOAD TEMPLATE
 # ============================================================
 
 def load_template() -> tuple[list[str], list[str]]:
     """
     Load the NSE security-master template.
 
-    Row 2 is used as the base row for every generated IPO.
+    Row 2 is used as the base row for every IPO.
     """
 
     if not TEMPLATE.exists():
@@ -122,6 +130,7 @@ def load_template() -> tuple[list[str], list[str]]:
         encoding="utf-8-sig",
         newline="",
     ) as file:
+
         rows = list(
             csv.reader(file)
         )
@@ -142,32 +151,29 @@ def load_template() -> tuple[list[str], list[str]]:
             f"{len(template_row)} columns."
         )
 
-    missing_columns = [
+    missing = [
         column
         for column in REQUIRED_REPLACEMENTS
         if column not in header
     ]
 
-    if missing_columns:
+    if missing:
         fail(
             "Template is missing required columns: "
-            + ", ".join(missing_columns)
+            + ", ".join(missing)
         )
 
     return header, template_row
 
 
 # ============================================================
-# HTTP
+# HTTP REQUEST
 # ============================================================
 
 def make_request(
     url: str,
     token: str,
 ) -> urllib.request.Request:
-    """
-    Create an authenticated Upstox request.
-    """
 
     return urllib.request.Request(
         url,
@@ -185,7 +191,7 @@ def make_request(
 
 
 # ============================================================
-# FETCH IPO LIST PAGE
+# FETCH IPO PAGE
 # ============================================================
 
 def fetch_page(
@@ -193,9 +199,6 @@ def fetch_page(
     status: str,
     page: int,
 ) -> dict:
-    """
-    Fetch one page of IPOs from Upstox.
-    """
 
     query = urllib.parse.urlencode(
         {
@@ -215,6 +218,7 @@ def fetch_page(
     )
 
     try:
+
         with urllib.request.urlopen(
             request,
             timeout=30,
@@ -234,6 +238,7 @@ def fetch_page(
             return json.loads(body)
 
     except urllib.error.HTTPError as exc:
+
         body = exc.read().decode(
             "utf-8",
             errors="replace",
@@ -246,6 +251,7 @@ def fetch_page(
         )
 
     except urllib.error.URLError as exc:
+
         fail(
             "Upstox request failed for "
             f"status={status}, page={page}: "
@@ -253,6 +259,7 @@ def fetch_page(
         )
 
     except json.JSONDecodeError as exc:
+
         fail(
             "Upstox returned invalid JSON for "
             f"status={status}, page={page}: "
@@ -260,6 +267,7 @@ def fetch_page(
         )
 
     except Exception as exc:
+
         fail(
             "Upstox request failed for "
             f"status={status}, page={page}: "
@@ -276,12 +284,10 @@ def fetch_ipo_details(
     ipo_id: str,
 ) -> dict:
     """
-    Fetch detailed information for one IPO.
+    Try to retrieve missing IPO fields from:
+        GET /v2/ipos/{id}
 
-    This is only used when the main IPO listing
-    is missing one or more required fields.
-
-    Failure here is NOT fatal.
+    Failure is NOT fatal.
     """
 
     encoded_id = urllib.parse.quote(
@@ -299,6 +305,7 @@ def fetch_ipo_details(
     )
 
     try:
+
         with urllib.request.urlopen(
             request,
             timeout=30,
@@ -309,6 +316,7 @@ def fetch_ipo_details(
             )
 
             if response.status != 200:
+
                 print(
                     "WARNING: Details request for "
                     f"{ipo_id} returned HTTP "
@@ -323,6 +331,7 @@ def fetch_ipo_details(
                 None,
                 "success",
             ):
+
                 print(
                     "WARNING: Details request for "
                     f"{ipo_id} returned an API error."
@@ -334,12 +343,16 @@ def fetch_ipo_details(
                 "data"
             )
 
-            if isinstance(data, dict):
+            if isinstance(
+                data,
+                dict,
+            ):
                 return data
 
             return {}
 
     except Exception as exc:
+
         print(
             "WARNING: Could not fetch details "
             f"for IPO {ipo_id}: {exc}"
@@ -349,15 +362,12 @@ def fetch_ipo_details(
 
 
 # ============================================================
-# FIELD VALIDATION
+# MISSING FIELD CHECK
 # ============================================================
 
 def get_missing_fields(
     ipo: dict,
 ) -> list[str]:
-    """
-    Return missing required IPO fields.
-    """
 
     missing: list[str] = []
 
@@ -382,13 +392,9 @@ def enrich_missing_fields(
     ipos: list[dict],
 ) -> tuple[list[dict], list[dict]]:
     """
-    Try to fill missing fields using the
-    Upstox IPO details endpoint.
+    Try the Upstox IPO details endpoint for incomplete records.
 
-    IPOs that still lack symbol or ISIN are
-    flagged and skipped.
-
-    They do NOT stop the entire job.
+    IPOs still missing symbol or ISIN are flagged/skipped.
     """
 
     valid_ipos: list[dict] = []
@@ -436,9 +442,8 @@ def enrich_missing_fields(
                 )
 
                 # Only fill missing fields.
-                #
-                # Existing values returned by the
-                # main IPO listing are NEVER overwritten.
+                # Never overwrite values already
+                # provided by the listing endpoint.
                 for field in REQUIRED_IPO_FIELDS:
 
                     current_value = str(
@@ -455,6 +460,7 @@ def enrich_missing_fields(
                         not current_value
                         and detail_value
                     ):
+
                         ipo_copy[
                             field
                         ] = detail_value
@@ -479,7 +485,7 @@ def enrich_missing_fields(
                 "status": str(
                     ipo_copy.get("status")
                     or ""
-                ),
+                ).lower(),
                 "missing_fields": (
                     missing_after
                 ),
@@ -509,15 +515,12 @@ def enrich_missing_fields(
 
 
 # ============================================================
-# FETCH ALL REAL IPOs
+# FETCH ALL OPEN + UPCOMING IPOs
 # ============================================================
 
 def fetch_all_real(
     token: str,
 ) -> list[dict]:
-    """
-    Fetch all OPEN and UPCOMING IPOs.
-    """
 
     if not token.strip():
         fail(
@@ -539,14 +542,13 @@ def fetch_all_real(
                 page,
             )
 
-            api_status = payload.get(
+            if payload.get(
                 "status"
-            )
-
-            if api_status not in (
+            ) not in (
                 None,
                 "success",
             ):
+
                 fail(
                     "Upstox API reported an error: "
                     f"{payload}"
@@ -561,6 +563,7 @@ def fetch_all_real(
                 records,
                 list,
             ):
+
                 fail(
                     "Unexpected Upstox response: "
                     "`data` is not a list."
@@ -599,15 +602,12 @@ def fetch_all_real(
 
 
 # ============================================================
-# MOCK DATA
+# MOCK
 # ============================================================
 
 def fetch_mock(
     path: Path,
 ) -> list[dict]:
-    """
-    Load mock IPO data for local testing.
-    """
 
     if not path.exists():
         fail(
@@ -618,6 +618,7 @@ def fetch_mock(
         "r",
         encoding="utf-8",
     ) as file:
+
         payload = json.load(file)
 
     if isinstance(
@@ -629,6 +630,7 @@ def fetch_mock(
     records: list[dict] = []
 
     for status in STATUSES:
+
         records.extend(
             payload.get(
                 status,
@@ -649,10 +651,8 @@ def normalize_and_dedupe(
     """
     Keep only OPEN and UPCOMING IPOs.
 
-    Dedupe by IPO ID.
-
-    If an IPO appears in both OPEN and UPCOMING,
-    OPEN takes precedence.
+    If the same IPO appears multiple times:
+    OPEN takes precedence over UPCOMING.
     """
 
     priority = {
@@ -677,10 +677,6 @@ def normalize_and_dedupe(
             or ""
         ).strip()
 
-        # Prefer the Upstox ID as the key.
-        #
-        # If there is no ID, use a fallback
-        # combination of available fields.
         key = (
             ipo_id
             or (
@@ -691,10 +687,12 @@ def normalize_and_dedupe(
         ).strip()
 
         if not key:
+
             print(
                 "FLAGGED / SKIPPED: "
                 "IPO record has no usable identifier."
             )
+
             continue
 
         existing = selected.get(
@@ -721,6 +719,7 @@ def normalize_and_dedupe(
                 old_status,
                 99,
             ):
+
                 selected[key] = ipo
 
     return list(
@@ -729,31 +728,24 @@ def normalize_and_dedupe(
 
 
 # ============================================================
-# SECURITY NAME
+# SECURITY MASTER NAME
 # ============================================================
 
 def build_fin_instrm_name(
     ipo: dict,
 ) -> str:
     """
-    Build FinInstrmNm.
+    Convert the Upstox IPO name into the security-master
+    instrument name.
 
-    IMPORTANT:
-    The Upstox IPO `name` often contains the word
-    "IPO". That is an IPO display name, not the
-    desired security-master name.
+    Example:
 
-    Therefore a trailing "IPO" is removed.
+        Robokidz Eduventures IPO
+        ->
+        Robokidz Eduventures
 
-    Examples:
-
-        "Robokidz Eduventures IPO"
-            -> "Robokidz Eduventures"
-
-        "National Stock Exchange of India IPO"
-            -> "National Stock Exchange of India"
-
-    No external data is invented.
+    No NSE lookup is required for an IPO to be considered
+    complete.
     """
 
     name = str(
@@ -764,37 +756,25 @@ def build_fin_instrm_name(
     if not name:
         return ""
 
-    # Remove common trailing IPO suffixes.
-    suffixes = (
-        " IPO",
-        " Ipo",
-        " ipo",
-    )
+    # Remove trailing "IPO" only.
+    if name.upper().endswith(
+        " IPO"
+    ):
 
-    for suffix in suffixes:
-
-        if name.endswith(
-            suffix
-        ):
-            name = name[
-                : -len(suffix)
-            ].strip()
-
-            break
+        name = name[
+            :-4
+        ].strip()
 
     return name
 
 
 # ============================================================
-# UNIQUE SIX-DIGIT IDS
+# UNIQUE SIX-DIGIT IDs
 # ============================================================
 
 def generate_unique_ids(
     count: int,
 ) -> list[str]:
-    """
-    Generate unique six-digit numeric IDs.
-    """
 
     if count > 900_000:
         fail(
@@ -820,28 +800,17 @@ def generate_unique_ids(
 
 
 # ============================================================
-# OUTPUT FILE NAME
+# OUTPUT FILENAME
 # ============================================================
 
 def get_output_filename() -> str:
     """
-    Generate today's required filename.
+    Generate:
 
-    Example:
-        NSE_CM_security_19092026.csv
+        NSE_CM_security_DDMMYYYY.csv
+
+    using India Standard Time.
     """
-
-    today = datetime.now(
-        timezone.utc
-    )
-
-    # GitHub Actions runs in UTC by default.
-    #
-    # The workflow itself is scheduled for
-    # Asia/Kolkata, but the runner clock is UTC.
-    #
-    # Therefore calculate the Indian date explicitly.
-    from zoneinfo import ZoneInfo
 
     india_now = datetime.now(
         ZoneInfo(
@@ -856,7 +825,7 @@ def get_output_filename() -> str:
     )
 
     return (
-        f"NSE_CM_security_"
+        "NSE_CM_security_"
         f"{date_string}.csv"
     )
 
@@ -875,7 +844,7 @@ def generate(
     list[dict],
 ]:
     """
-    Generate the final NSE-style CSV.
+    Generate the final CSV.
 
     Returns:
 
@@ -889,14 +858,19 @@ def generate(
         load_template()
     )
 
-    # First keep only open/upcoming
-    # and remove duplicates.
+    # --------------------------------------------------------
+    # Normalize and deduplicate
+    # --------------------------------------------------------
+
     ipos = normalize_and_dedupe(
         ipos
     )
 
-    # Try Upstox details endpoint
-    # for incomplete IPO listings.
+    # --------------------------------------------------------
+    # Real mode:
+    # Try details endpoint for incomplete records.
+    # --------------------------------------------------------
+
     if token:
 
         valid_ipos, flagged_ipos = (
@@ -906,9 +880,12 @@ def generate(
             )
         )
 
+    # --------------------------------------------------------
+    # Mock mode
+    # --------------------------------------------------------
+
     else:
 
-        # Mock/local mode.
         valid_ipos = []
         flagged_ipos = []
 
@@ -941,7 +918,7 @@ def generate(
                                 "status"
                             )
                             or ""
-                        ),
+                        ).lower(),
                         "missing_fields": (
                             missing
                         ),
@@ -955,10 +932,7 @@ def generate(
                 )
 
     # --------------------------------------------------------
-    # IMPORTANT:
-    #
-    # No valid IPOs means no CSV.
-    # This is a genuine fatal condition.
+    # No complete IPOs
     # --------------------------------------------------------
 
     if not valid_ipos:
@@ -968,7 +942,10 @@ def generate(
             "for CSV generation."
         )
 
-    # Find the four template columns.
+    # --------------------------------------------------------
+    # Locate template columns
+    # --------------------------------------------------------
+
     indices = {
         column: header.index(
             column
@@ -976,7 +953,10 @@ def generate(
         for column in REQUIRED_REPLACEMENTS
     }
 
-    # Generate unique six-digit IDs.
+    # --------------------------------------------------------
+    # Generate unique FinInstrmId values
+    # --------------------------------------------------------
+
     instrument_ids = (
         generate_unique_ids(
             len(valid_ipos)
@@ -984,6 +964,10 @@ def generate(
     )
 
     rows: list[list[str]] = []
+
+    # --------------------------------------------------------
+    # Generate rows
+    # --------------------------------------------------------
 
     for ipo, instrument_id in zip(
         valid_ipos,
@@ -1006,15 +990,26 @@ def generate(
             )
         )
 
-        # Final safety check.
-        #
-        # symbol and ISIN should already have been
-        # validated, but never write an invalid row.
+        # Final validation.
         if not symbol or not isin:
+
+            missing_fields = []
+
+            if not symbol:
+                missing_fields.append(
+                    "symbol"
+                )
+
+            if not isin:
+                missing_fields.append(
+                    "isin"
+                )
+
             print(
                 "FLAGGED / SKIPPED: "
                 f"{ipo.get('name', '<unknown>')} "
-                "lost required data during generation."
+                f"missing "
+                f"{', '.join(missing_fields)}"
             )
 
             flagged_ipos.append(
@@ -1036,31 +1031,21 @@ def generate(
                             "status"
                         )
                         or ""
+                    ).lower(),
+                    "missing_fields": (
+                        missing_fields
                     ),
-                    "missing_fields": [
-                        field
-                        for field, value in (
-                            (
-                                "symbol",
-                                symbol,
-                            ),
-                            (
-                                "isin",
-                                isin,
-                            ),
-                        )
-                        if not value
-                    ],
                 }
             )
 
             continue
 
         if not fin_instrm_name:
+
             print(
                 "FLAGGED / SKIPPED: "
                 f"{ipo.get('name', '<unknown>')} "
-                "has no usable security name."
+                "has no usable FinInstrmNm."
             )
 
             flagged_ipos.append(
@@ -1082,7 +1067,7 @@ def generate(
                             "status"
                         )
                         or ""
-                    ),
+                    ).lower(),
                     "missing_fields": [
                         "FinInstrmNm"
                     ],
@@ -1092,13 +1077,13 @@ def generate(
             continue
 
         # ----------------------------------------------------
-        # COPY TEMPLATE ROW EXACTLY.
+        # COPY ROW 2 OF TEMPLATE
         # ----------------------------------------------------
 
         row = template_row.copy()
 
         # ----------------------------------------------------
-        # THESE ARE THE ONLY FOUR VALUES CHANGED.
+        # ONLY THESE FOUR VALUES CHANGE
         # ----------------------------------------------------
 
         row[
@@ -1121,15 +1106,19 @@ def generate(
             row
         )
 
-    # A safety check after row-level validation.
+    # --------------------------------------------------------
+    # Final safety check
+    # --------------------------------------------------------
+
     if not rows:
+
         fail(
             "No complete IPOs are available "
             "for CSV generation."
         )
 
     # --------------------------------------------------------
-    # OUTPUT DIRECTORY
+    # Create output directory
     # --------------------------------------------------------
 
     OUTPUT_DIR.mkdir(
@@ -1138,7 +1127,7 @@ def generate(
     )
 
     # --------------------------------------------------------
-    # DATED OUTPUT FILE
+    # Dated filename
     # --------------------------------------------------------
 
     output_filename = (
@@ -1151,7 +1140,7 @@ def generate(
     )
 
     # --------------------------------------------------------
-    # WRITE CSV
+    # Write CSV
     # --------------------------------------------------------
 
     with output_path.open(
@@ -1173,40 +1162,154 @@ def generate(
             rows
         )
 
+    # ========================================================
+    # WEBSITE METADATA
+    # ========================================================
+
+    # This structure intentionally supports the existing
+    # GitHub Pages website.
+
+    complete_ipos = []
+
+    for ipo in valid_ipos:
+
+        symbol = str(
+            ipo.get("symbol")
+            or ""
+        ).strip()
+
+        isin = str(
+            ipo.get("isin")
+            or ""
+        ).strip()
+
+        instrument_name = (
+            build_fin_instrm_name(
+                ipo
+            )
+        )
+
+        # Only expose records that actually made it
+        # into the generated CSV.
+        if (
+            symbol
+            and isin
+            and instrument_name
+        ):
+
+            complete_ipos.append(
+                {
+                    "ipo_name": str(
+                        ipo.get(
+                            "name"
+                        )
+                        or ""
+                    ).strip(),
+
+                    "status": str(
+                        ipo.get(
+                            "status"
+                        )
+                        or ""
+                    ).strip().lower(),
+
+                    "symbol": symbol,
+
+                    "instrument_name": (
+                        instrument_name
+                    ),
+
+                    "isin": isin,
+                }
+            )
+
+    india_now = datetime.now(
+        ZoneInfo(
+            "Asia/Kolkata"
+        )
+    )
+
     # --------------------------------------------------------
-    # METADATA
+    # IMPORTANT:
+    #
+    # Keep BOTH "filename" and "csv_filename".
+    #
+    # The existing workflow expects:
+    #     csv_filename
+    #
+    # The website can use:
+    #     filename
+    #
+    # Keeping both prevents compatibility problems.
     # --------------------------------------------------------
 
     metadata = {
-    "generated_utc": (
-        datetime.now(
-            timezone.utc
-        ).isoformat()
-    ),
-    "generated_ist": (
-        datetime.now(
-            __import__(
-                "zoneinfo"
-            ).ZoneInfo(
-                "Asia/Kolkata"
-            )
-        ).isoformat()
-    ),
-    "filename": output_filename,
-    "csv_filename": output_filename,
-        "ipo_count": len(rows),
-        "skipped_count": len(
-            flagged_ipos
+
+        "generated_utc": (
+            datetime.now(
+                timezone.utc
+            ).isoformat()
         ),
+
+        "generated_ist": (
+            india_now.isoformat()
+        ),
+
+        "generated_date_ddmmyyyy": (
+            india_now.strftime(
+                "%d/%m/%Y"
+            )
+        ),
+
+        "filename": (
+            output_filename
+        ),
+
+        "csv_filename": (
+            output_filename
+        ),
+
+        "ipo_count": (
+            len(rows)
+        ),
+
+        "skipped_count": (
+            len(flagged_ipos)
+        ),
+
+        "open_count": sum(
+            1
+            for ipo in complete_ipos
+            if ipo["status"] == "open"
+        ),
+
+        "upcoming_count": sum(
+            1
+            for ipo in complete_ipos
+            if ipo["status"] == "upcoming"
+        ),
+
+        # THIS is what the current website expects.
+        "complete_ipos": (
+            complete_ipos
+        ),
+
         "statuses": [
             "open",
             "upcoming",
         ],
-        "template": TEMPLATE.name,
+
+        "template": (
+            TEMPLATE.name
+        ),
+
         "replaced_columns": list(
             REQUIRED_REPLACEMENTS
         ),
-        "skipped_ipos": flagged_ipos,
+
+        "skipped_ipos": (
+            flagged_ipos
+        ),
     }
 
     with METADATA.open(
@@ -1218,6 +1321,7 @@ def generate(
             metadata,
             file,
             indent=2,
+            ensure_ascii=False,
         )
 
     return (
@@ -1312,18 +1416,25 @@ def main() -> None:
     )
 
     print(
-        f"Generated file : "
-        f"{output_path}"
+        f"Generated file : {output_path.name}"
     )
 
     print(
-        f"Generated rows : "
-        f"{count}"
+        f"Generated rows : {count}"
     )
 
     print(
-        f"Skipped IPOs   : "
-        f"{len(flagged_ipos)}"
+        f"Skipped IPOs   : {len(flagged_ipos)}"
+    )
+
+    print(
+        f"Open rows      : "
+        f"{sum(1 for ipo in valid_ipos if str(ipo.get('status', '')).lower() == 'open')}"
+    )
+
+    print(
+        f"Upcoming rows  : "
+        f"{sum(1 for ipo in valid_ipos if str(ipo.get('status', '')).lower() == 'upcoming')}"
     )
 
     print()
