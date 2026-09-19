@@ -1,0 +1,270 @@
+{
+  "generated_utc": "2026-09-19T13:16:24.064968+00:00",
+  "ipo_count": 10,
+  "skipped_count": 28,
+  "statuses": [
+    "open",
+    "upcoming"
+  ],
+  "template": "NSE_CM_security_template.csv",
+  "replaced_columns": [
+    "FinInstrmId",
+    "TckrSymb",
+    "FinInstrmNm",
+    "ISIN"
+  ],
+  "skipped_ipos": [
+    {
+      "id": "a-one-steels-india-limited-ipo",
+      "name": "A-One Steels India IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "skoffset-limited-ipo",
+      "name": "S.K.Offset IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "sai-urja-indo-ventures-limited-ipo",
+      "name": "Sai Urja Indo Ventures IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "himalaya-nutravedics-india-limited-ipo",
+      "name": "Himalaya Nutravedics India IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "anand-seamless-limited-ipo",
+      "name": "Anand Seamless IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "varmora-granito-limited-ipo",
+      "name": "Varmora Granito IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "fx-multitech-limited-ipo",
+      "name": "FX Multitech IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "armee-infotech-limited",
+      "name": "ArMee Infotech IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "parle-products-limited-ipo",
+      "name": "Parle Products IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "reliance-jio-limited-ipo",
+      "name": "Reliance Jio IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "flipkart-limited-ipo",
+      "name": "Flipkart IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "prestige-hospitality-ventures-ipo",
+      "name": "Prestige Hospitality Ventures IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "credila-financial-services-ipo",
+      "name": "Credila Financial Services IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "phonepe-ipo",
+      "name": "PhonePe",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "zepto-ipo",
+      "name": "Zepto",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "hero-fincorp-ipo",
+      "name": "Hero FinCorp IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "deltatech-gaming-ipo",
+      "name": "Deltatech Gaming",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "biba-fashions-limited-ipo",
+      "name": "Biba Fashions Limited",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "droom-technology-limited-ipo",
+      "name": "Droom Technology Limited",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "puranik-builders-limited-ipo",
+      "name": "Puranik Builders Limited",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "bharat-fih-limited-ipo",
+      "name": "Bharat FIH Limited",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "fabindia-ipo",
+      "name": "FabIndia IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "oyo-ipo",
+      "name": "OYO IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "ebixcash-ipo",
+      "name": "EBIXCASH IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "boat-ipo",
+      "name": "BoAt IPO ",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "navi-technologies-ipo",
+      "name": "Navi Technologies IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "wellness-forever-medicare-ipo",
+      "name": "Wellness Forever Medicare IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "go-first-go-airlines-ipo",
+      "name": "Go First (Go Airlines) IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    }
+  ]
+}
