@@ -1,10 +1,85 @@
 {
-  "generated_utc": "2026-09-19T13:57:06.892656+00:00",
-  "generated_ist": "2026-09-19T19:27:06.892691+05:30",
+  "generated_utc": "2026-09-19T14:05:12.911431+00:00",
+  "generated_ist": "2026-09-19T19:35:12.911428+05:30",
+  "generated_date_ddmmyyyy": "19/09/2026",
   "filename": "NSE_CM_security_19092026.csv",
   "csv_filename": "NSE_CM_security_19092026.csv",
   "ipo_count": 10,
   "skipped_count": 28,
+  "open_count": 7,
+  "upcoming_count": 3,
+  "complete_ipos": [
+    {
+      "ipo_name": "National Stock Exchange of India IPO",
+      "status": "open",
+      "symbol": "NSE",
+      "instrument_name": "National Stock Exchange of India",
+      "isin": "INE721I01024"
+    },
+    {
+      "ipo_name": "Robokidz Eduventures IPO",
+      "status": "open",
+      "symbol": "ROBOKIDZ",
+      "instrument_name": "Robokidz Eduventures",
+      "isin": "INE1W8R01018"
+    },
+    {
+      "ipo_name": "Vivekanand Cotspin IPO",
+      "status": "open",
+      "symbol": "VIVEKANAND",
+      "instrument_name": "Vivekanand Cotspin",
+      "isin": "INE1JJP01018"
+    },
+    {
+      "ipo_name": "Axiom Gas Engineering IPO",
+      "status": "open",
+      "symbol": "AXIOMGAS",
+      "instrument_name": "Axiom Gas Engineering",
+      "isin": "INE16J201028"
+    },
+    {
+      "ipo_name": "Kheria Autocomp IPO",
+      "status": "open",
+      "symbol": "KHERIAAUTO",
+      "instrument_name": "Kheria Autocomp",
+      "isin": "INE0HOL01013"
+    },
+    {
+      "ipo_name": "Sonaselection India IPO",
+      "status": "open",
+      "symbol": "SONA",
+      "instrument_name": "Sonaselection India",
+      "isin": "INE0LLZ01011"
+    },
+    {
+      "ipo_name": "SpectraA Technology Solutions IPO",
+      "status": "open",
+      "symbol": "SPECTRAA",
+      "instrument_name": "SpectraA Technology Solutions",
+      "isin": "INE0GAN01010"
+    },
+    {
+      "ipo_name": "Twinkle Papers IPO",
+      "status": "upcoming",
+      "symbol": "TWINKLE",
+      "instrument_name": "Twinkle Papers",
+      "isin": "INE0R3M01018"
+    },
+    {
+      "ipo_name": "Sri Priyanka Geo Commex IPO",
+      "status": "upcoming",
+      "symbol": "SPGCL",
+      "instrument_name": "Sri Priyanka Geo Commex",
+      "isin": "INE0WEN01019"
+    },
+    {
+      "ipo_name": "Solar91 Cleantech IPO",
+      "status": "upcoming",
+      "symbol": "SOLAR91",
+      "instrument_name": "Solar91 Cleantech",
+      "isin": "INE0U5I01016"
+    }
+  ],
   "statuses": [
     "open",
     "upcoming"
