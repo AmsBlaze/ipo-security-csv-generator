@@ -1,20 +1,48 @@
 {
-  "generated_utc": "2026-09-20T14:47:51.894494+00:00",
-  "generated_ist": "2026-09-20T20:17:51.894491+05:30",
-  "generated_date_ddmmyyyy": "20/09/2026",
-  "filename": "NSE_CM_security_20092026.csv",
-  "csv_filename": "NSE_CM_security_20092026.csv",
-  "ipo_count": 11,
-  "skipped_count": 27,
-  "open_count": 8,
+  "generated_utc": "2026-09-21T17:09:30.606637+00:00",
+  "generated_ist": "2026-09-21T22:39:30.606634+05:30",
+  "generated_date_ddmmyyyy": "21/09/2026",
+  "filename": "NSE_CM_security_21092026.csv",
+  "csv_filename": "NSE_CM_security_21092026.csv",
+  "ipo_count": 12,
+  "skipped_count": 29,
+  "open_count": 9,
   "upcoming_count": 3,
   "complete_ipos": [
     {
-      "ipo_name": "National Stock Exchange of India IPO",
+      "ipo_name": "Elevate Campuses IPO",
       "status": "open",
-      "symbol": "NSE",
-      "instrument_name": "National Stock Exchange of India",
-      "isin": "INE721I01024"
+      "symbol": "ELEVATE",
+      "instrument_name": "Elevate Campuses",
+      "isin": "INE147X01013"
+    },
+    {
+      "ipo_name": "Swastika Infra IPO",
+      "status": "open",
+      "symbol": "SWASTIKAIN",
+      "instrument_name": "Swastika Infra",
+      "isin": "INE1QJA01015"
+    },
+    {
+      "ipo_name": "Anand Seamless IPO",
+      "status": "open",
+      "symbol": "ANAND",
+      "instrument_name": "Anand Seamless",
+      "isin": "INE0XDX01018"
+    },
+    {
+      "ipo_name": "Himalaya Nutravedics India IPO",
+      "status": "open",
+      "symbol": "HNIL",
+      "instrument_name": "Himalaya Nutravedics India",
+      "isin": "INE1OTR01013"
+    },
+    {
+      "ipo_name": "Varmora Granito IPO",
+      "status": "open",
+      "symbol": "VARMORA",
+      "instrument_name": "Varmora Granito",
+      "isin": "INE0M5301040"
     },
     {
       "ipo_name": "FX Multitech IPO",
@@ -43,27 +71,6 @@
       "symbol": "AXIOMGAS",
       "instrument_name": "Axiom Gas Engineering",
       "isin": "INE16J201028"
-    },
-    {
-      "ipo_name": "Kheria Autocomp IPO",
-      "status": "open",
-      "symbol": "KHERIAAUTO",
-      "instrument_name": "Kheria Autocomp",
-      "isin": "INE0HOL01013"
-    },
-    {
-      "ipo_name": "Sonaselection India IPO",
-      "status": "open",
-      "symbol": "SONA",
-      "instrument_name": "Sonaselection India",
-      "isin": "INE0LLZ01011"
-    },
-    {
-      "ipo_name": "SpectraA Technology Solutions IPO",
-      "status": "open",
-      "symbol": "SPECTRAA",
-      "instrument_name": "SpectraA Technology Solutions",
-      "isin": "INE0GAN01010"
     },
     {
       "ipo_name": "Twinkle Papers IPO",
@@ -109,6 +116,51 @@
       ]
     },
     {
+      "id": "coreintegra-consulting-services-limited-ipo",
+      "name": "Coreintegra Consulting Services IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "pooja-logistics-limited-ipo",
+      "name": "Pooja Logistics IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "liqvd-digital-india-limited-ipo",
+      "name": "Liqvd Digital India IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "adroit-industries-india-limited-ipo",
+      "name": "Adroit Industries (India) IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "unitec-fibres-limited-ipo",
+      "name": "Unitec Fibres IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
       "id": "skoffset-limited-ipo",
       "name": "S.K.Offset IPO",
       "status": "upcoming",
@@ -120,33 +172,6 @@
     {
       "id": "sai-urja-indo-ventures-limited-ipo",
       "name": "Sai Urja Indo Ventures IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "himalaya-nutravedics-india-limited-ipo",
-      "name": "Himalaya Nutravedics India IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "anand-seamless-limited-ipo",
-      "name": "Anand Seamless IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "varmora-granito-limited-ipo",
-      "name": "Varmora Granito IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
