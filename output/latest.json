@@ -1,14 +1,35 @@
 {
-  "generated_utc": "2026-09-21T17:09:30.606637+00:00",
-  "generated_ist": "2026-09-21T22:39:30.606634+05:30",
-  "generated_date_ddmmyyyy": "21/09/2026",
-  "filename": "NSE_CM_security_21092026.csv",
-  "csv_filename": "NSE_CM_security_21092026.csv",
-  "ipo_count": 12,
-  "skipped_count": 29,
-  "open_count": 9,
+  "generated_utc": "2026-09-22T15:37:10.256071+00:00",
+  "generated_ist": "2026-09-22T21:07:10.256069+05:30",
+  "generated_date_ddmmyyyy": "22/09/2026",
+  "filename": "NSE_CM_security_22092026.csv",
+  "csv_filename": "NSE_CM_security_22092026.csv",
+  "ipo_count": 18,
+  "skipped_count": 33,
+  "open_count": 15,
   "upcoming_count": 3,
   "complete_ipos": [
+    {
+      "ipo_name": "Adroit Industries (India) IPO",
+      "status": "open",
+      "symbol": "ADROITIND",
+      "instrument_name": "Adroit Industries (India)",
+      "isin": "INE505M01015"
+    },
+    {
+      "ipo_name": "ArMee Infotech IPO",
+      "status": "open",
+      "symbol": "ARMEE",
+      "instrument_name": "ArMee Infotech",
+      "isin": "INE0TWE01016"
+    },
+    {
+      "ipo_name": "Coreintegra Consulting Services IPO",
+      "status": "open",
+      "symbol": "COREIN",
+      "instrument_name": "Coreintegra Consulting Services",
+      "isin": "INE11ES01010"
+    },
     {
       "ipo_name": "Elevate Campuses IPO",
       "status": "open",
@@ -17,11 +38,39 @@
       "isin": "INE147X01013"
     },
     {
+      "ipo_name": "Liqvd Digital India IPO",
+      "status": "open",
+      "symbol": "LIQVD",
+      "instrument_name": "Liqvd Digital India",
+      "isin": "INE0CJT01025"
+    },
+    {
+      "ipo_name": "Pooja Logistics IPO",
+      "status": "open",
+      "symbol": "POOJALOGIS",
+      "instrument_name": "Pooja Logistics",
+      "isin": "INE1C2Q01017"
+    },
+    {
+      "ipo_name": "S.K.Offset IPO",
+      "status": "open",
+      "symbol": "SKOFFSET",
+      "instrument_name": "S.K.Offset",
+      "isin": "INE2MKZ01017"
+    },
+    {
       "ipo_name": "Swastika Infra IPO",
       "status": "open",
       "symbol": "SWASTIKAIN",
       "instrument_name": "Swastika Infra",
       "isin": "INE1QJA01015"
+    },
+    {
+      "ipo_name": "Unitec Fibres IPO",
+      "status": "open",
+      "symbol": "UNITEC",
+      "instrument_name": "Unitec Fibres",
+      "isin": "INE0WOK01014"
     },
     {
       "ipo_name": "Anand Seamless IPO",
@@ -66,13 +115,6 @@
       "isin": "INE1JJP01018"
     },
     {
-      "ipo_name": "Axiom Gas Engineering IPO",
-      "status": "open",
-      "symbol": "AXIOMGAS",
-      "instrument_name": "Axiom Gas Engineering",
-      "isin": "INE16J201028"
-    },
-    {
       "ipo_name": "Twinkle Papers IPO",
       "status": "upcoming",
       "symbol": "TWINKLE",
@@ -107,8 +149,8 @@
   ],
   "skipped_ipos": [
     {
-      "id": "a-one-steels-india-limited-ipo",
-      "name": "A-One Steels India IPO",
+      "id": "bench-mark-infotech-services-limited-ipo",
+      "name": "Bench Mark Infotech Services IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
@@ -116,8 +158,8 @@
       ]
     },
     {
-      "id": "coreintegra-consulting-services-limited-ipo",
-      "name": "Coreintegra Consulting Services IPO",
+      "id": "dudani-retail-limited",
+      "name": "Dudani Retail IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
@@ -125,8 +167,8 @@
       ]
     },
     {
-      "id": "pooja-logistics-limited-ipo",
-      "name": "Pooja Logistics IPO",
+      "id": "himalayan-solar-limited-ipo",
+      "name": "Himalayan Solar IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
@@ -134,8 +176,8 @@
       ]
     },
     {
-      "id": "liqvd-digital-india-limited-ipo",
-      "name": "Liqvd Digital India IPO",
+      "id": "acevector-limited-ipo",
+      "name": "Acevector IPO(Snapdeal)",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
@@ -143,8 +185,8 @@
       ]
     },
     {
-      "id": "adroit-industries-india-limited-ipo",
-      "name": "Adroit Industries (India) IPO",
+      "id": "orient-cables-india-limited-ipo",
+      "name": "Orient Cables (India) IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
@@ -152,8 +194,8 @@
       ]
     },
     {
-      "id": "unitec-fibres-limited-ipo",
-      "name": "Unitec Fibres IPO",
+      "id": "german-green-steel-and-power-limited-ipo",
+      "name": "German Green Steel & Power IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
@@ -161,8 +203,8 @@
       ]
     },
     {
-      "id": "skoffset-limited-ipo",
-      "name": "S.K.Offset IPO",
+      "id": "runwal-enterprises-limited-ipo",
+      "name": "Runwal Enterprises IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
@@ -179,8 +221,44 @@
       ]
     },
     {
-      "id": "armee-infotech-limited",
-      "name": "ArMee Infotech IPO",
+      "id": "roopa-screen-limited-ipo",
+      "name": "Roopa Screen IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "peshwa-wheat-limited-ipo",
+      "name": "Peshwa Wheat IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "green-asia-impex-limited-ipo",
+      "name": "Green Asia Impex IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "moneyview-limited-ipo",
+      "name": "Moneyview IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "a-one-steels-india-limited-ipo",
+      "name": "A-One Steels India IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
