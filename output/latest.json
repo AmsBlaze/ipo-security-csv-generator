@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-09-25T15:54:38.152536+00:00",
-  "generated_ist": "2026-09-25T21:24:38.152533+05:30",
-  "generated_date_ddmmyyyy": "25/09/2026",
-  "filename": "NSE_CM_security_25092026.csv",
-  "csv_filename": "NSE_CM_security_25092026.csv",
-  "ipo_count": 21,
-  "skipped_count": 31,
-  "open_count": 18,
+  "generated_utc": "2026-09-26T15:04:35.106221+00:00",
+  "generated_ist": "2026-09-26T20:34:35.106218+05:30",
+  "generated_date_ddmmyyyy": "26/09/2026",
+  "filename": "NSE_CM_security_26092026.csv",
+  "csv_filename": "NSE_CM_security_26092026.csv",
+  "ipo_count": 22,
+  "skipped_count": 30,
+  "open_count": 19,
   "upcoming_count": 3,
   "complete_ipos": [
     {
@@ -15,6 +15,13 @@
       "symbol": "SHREETNB",
       "instrument_name": "Shree TNB Polymers",
       "isin": "INE935K01018"
+    },
+    {
+      "ipo_name": "SRIT India IPO",
+      "status": "open",
+      "symbol": "SRIT",
+      "instrument_name": "SRIT India",
+      "isin": "INE307K01028"
     },
     {
       "ipo_name": "Shivchem Agro IPO",
@@ -253,15 +260,6 @@
     {
       "id": "everestims-technologies-limited-ipo",
       "name": "EverestIMS Technologies IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "srit-india-limited-ipo",
-      "name": "SRIT India IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
