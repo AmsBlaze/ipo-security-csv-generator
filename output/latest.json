@@ -1,20 +1,48 @@
 {
-  "generated_utc": "2026-09-27T15:46:22.280330+00:00",
-  "generated_ist": "2026-09-27T21:16:22.280327+05:30",
-  "generated_date_ddmmyyyy": "27/09/2026",
-  "filename": "NSE_CM_security_27092026.csv",
-  "csv_filename": "NSE_CM_security_27092026.csv",
-  "ipo_count": 22,
-  "skipped_count": 30,
-  "open_count": 19,
+  "generated_utc": "2026-09-28T18:41:45.233330+00:00",
+  "generated_ist": "2026-09-29T00:11:45.233328+05:30",
+  "generated_date_ddmmyyyy": "29/09/2026",
+  "filename": "NSE_CM_security_29092026.csv",
+  "csv_filename": "NSE_CM_security_29092026.csv",
+  "ipo_count": 20,
+  "skipped_count": 27,
+  "open_count": 17,
   "upcoming_count": 3,
   "complete_ipos": [
+    {
+      "ipo_name": "EverestIMS Technologies IPO",
+      "status": "open",
+      "symbol": "EIMS",
+      "instrument_name": "EverestIMS Technologies",
+      "isin": "INE0YUW01020"
+    },
     {
       "ipo_name": "Shree TNB Polymers IPO",
       "status": "open",
       "symbol": "SHREETNB",
       "instrument_name": "Shree TNB Polymers",
       "isin": "INE935K01018"
+    },
+    {
+      "ipo_name": "Vans Electroengineerings IPO",
+      "status": "open",
+      "symbol": "VANS",
+      "instrument_name": "Vans Electroengineerings",
+      "isin": "INE2SO401011"
+    },
+    {
+      "ipo_name": "Black Opal Consultants IPO",
+      "status": "open",
+      "symbol": "BLACKOPAL",
+      "instrument_name": "Black Opal Consultants",
+      "isin": "INE0M3101012"
+    },
+    {
+      "ipo_name": "Acme Universal Safezone 9 IPO",
+      "status": "open",
+      "symbol": "ACMEUNIV",
+      "instrument_name": "Acme Universal Safezone 9",
+      "isin": "INE1KUL01020"
     },
     {
       "ipo_name": "SRIT India IPO",
@@ -45,18 +73,11 @@
       "isin": "INE0RNF01016"
     },
     {
-      "ipo_name": "Acme Universal Safezone 9 IPO",
+      "ipo_name": "Acevector IPO(Snapdeal)",
       "status": "open",
-      "symbol": "ACMEUNIV",
-      "instrument_name": "Acme Universal Safezone 9",
-      "isin": "INE1KUL01020"
-    },
-    {
-      "ipo_name": "Himalayan Solar IPO",
-      "status": "open",
-      "symbol": "HIMALAYAN",
-      "instrument_name": "Himalayan Solar",
-      "isin": "INE1B7I01014"
+      "symbol": "ACEVECTOR",
+      "instrument_name": "Acevector IPO(Snapdeal)",
+      "isin": "INE580P01029"
     },
     {
       "ipo_name": "Sai Urja Indo Ventures IPO",
@@ -80,6 +101,13 @@
       "isin": "INE0J1N01028"
     },
     {
+      "ipo_name": "Himalayan Solar IPO",
+      "status": "open",
+      "symbol": "HIMALAYAN",
+      "instrument_name": "Himalayan Solar",
+      "isin": "INE1B7I01014"
+    },
+    {
       "ipo_name": "German Green Steel & Power IPO",
       "status": "open",
       "symbol": "GERMAN",
@@ -99,48 +127,6 @@
       "symbol": "BMISL",
       "instrument_name": "Bench Mark Infotech Services",
       "isin": "INE2OKU01014"
-    },
-    {
-      "ipo_name": "Acevector IPO(Snapdeal)",
-      "status": "open",
-      "symbol": "ACEVECTOR",
-      "instrument_name": "Acevector IPO(Snapdeal)",
-      "isin": "INE580P01029"
-    },
-    {
-      "ipo_name": "A-One Steels India IPO",
-      "status": "open",
-      "symbol": "AONESTEELS",
-      "instrument_name": "A-One Steels India",
-      "isin": "INE0OTC01025"
-    },
-    {
-      "ipo_name": "Roopa Screen IPO",
-      "status": "open",
-      "symbol": "ROOPA",
-      "instrument_name": "Roopa Screen",
-      "isin": "INE2BTZ01011"
-    },
-    {
-      "ipo_name": "Peshwa Wheat IPO",
-      "status": "open",
-      "symbol": "PESHWA",
-      "instrument_name": "Peshwa Wheat",
-      "isin": "INE0SR101016"
-    },
-    {
-      "ipo_name": "Moneyview IPO",
-      "status": "open",
-      "symbol": "MONEYVIEW",
-      "instrument_name": "Moneyview",
-      "isin": "INE0PTN01011"
-    },
-    {
-      "ipo_name": "Green Asia Impex IPO",
-      "status": "open",
-      "symbol": "GREENASIA",
-      "instrument_name": "Green Asia Impex",
-      "isin": "INE1WDS01018"
     },
     {
       "ipo_name": "Twinkle Papers IPO",
@@ -231,35 +217,8 @@
       ]
     },
     {
-      "id": "vans-electroengineerings-limited-ipo",
-      "name": "Vans Electroengineerings IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
       "id": "papadmalji-agro-foods-limited-ipo",
       "name": "Papadmalji Agro Foods IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "black-opal-consultants-limited-ipo",
-      "name": "Black Opal Consultants IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "everestims-technologies-limited-ipo",
-      "name": "EverestIMS Technologies IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
