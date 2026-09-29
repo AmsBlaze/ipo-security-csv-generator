@@ -1,20 +1,90 @@
 {
-  "generated_utc": "2026-09-28T18:41:45.233330+00:00",
-  "generated_ist": "2026-09-29T00:11:45.233328+05:30",
+  "generated_utc": "2026-09-29T16:58:21.830014+00:00",
+  "generated_ist": "2026-09-29T22:28:21.830011+05:30",
   "generated_date_ddmmyyyy": "29/09/2026",
   "filename": "NSE_CM_security_29092026.csv",
   "csv_filename": "NSE_CM_security_29092026.csv",
-  "ipo_count": 20,
-  "skipped_count": 27,
-  "open_count": 17,
+  "ipo_count": 24,
+  "skipped_count": 20,
+  "open_count": 21,
   "upcoming_count": 3,
   "complete_ipos": [
+    {
+      "ipo_name": "TNA Solutions IPO",
+      "status": "open",
+      "symbol": "TNA",
+      "instrument_name": "TNA Solutions",
+      "isin": "INE10VL01011"
+    },
+    {
+      "ipo_name": "Paramount Syntex IPO",
+      "status": "open",
+      "symbol": "PARASYNTEX",
+      "instrument_name": "Paramount Syntex",
+      "isin": "INE0TBC01014"
+    },
+    {
+      "ipo_name": "Acme India Industries IPO",
+      "status": "open",
+      "symbol": "ACMERAIL",
+      "instrument_name": "Acme India Industries",
+      "isin": "INE162701010"
+    },
     {
       "ipo_name": "EverestIMS Technologies IPO",
       "status": "open",
       "symbol": "EIMS",
       "instrument_name": "EverestIMS Technologies",
       "isin": "INE0YUW01020"
+    },
+    {
+      "ipo_name": "Vishal Nirmiti IPO",
+      "status": "open",
+      "symbol": "VNL",
+      "instrument_name": "Vishal Nirmiti",
+      "isin": "INE1O5L01025"
+    },
+    {
+      "ipo_name": "Sollfege Smart Electronics IPO",
+      "status": "open",
+      "symbol": "SOLLFEGE",
+      "instrument_name": "Sollfege Smart Electronics",
+      "isin": "INE17HG01015"
+    },
+    {
+      "ipo_name": "SJP Ultrasonic IPO",
+      "status": "open",
+      "symbol": "SJP",
+      "instrument_name": "SJP Ultrasonic",
+      "isin": "INE0S4601017"
+    },
+    {
+      "ipo_name": "Omara Ventures India IPO",
+      "status": "open",
+      "symbol": "OMARA",
+      "instrument_name": "Omara Ventures India",
+      "isin": "INE1IA801011"
+    },
+    {
+      "ipo_name": "Nityas Gems & Jewellery IPO",
+      "status": "open",
+      "symbol": "NITYAS",
+      "instrument_name": "Nityas Gems & Jewellery",
+      "isin": "INE211501023"
+    },
+    {
+      "ipo_name": "Eventions IPO",
+      "status": "open",
+      "symbol": "EVENTIONS",
+      "instrument_name": "Eventions",
+      "isin": "INE20M201019"
+    },
+    {
+      "ipo_name": "Dove Soft IPO",
+      "status": "open",
+      "symbol": "DSL",
+      "instrument_name": "Dove Soft",
+      "isin": "INE0NXJ01016"
     },
     {
       "ipo_name": "Shree TNB Polymers IPO",
@@ -31,11 +101,25 @@
       "isin": "INE2SO401011"
     },
     {
+      "ipo_name": "Papadmalji Agro Foods IPO",
+      "status": "open",
+      "symbol": "PAPADMALJI",
+      "instrument_name": "Papadmalji Agro Foods",
+      "isin": "INE1V7901010"
+    },
+    {
       "ipo_name": "Black Opal Consultants IPO",
       "status": "open",
       "symbol": "BLACKOPAL",
       "instrument_name": "Black Opal Consultants",
       "isin": "INE0M3101012"
+    },
+    {
+      "ipo_name": "Green Asia Impex IPO",
+      "status": "open",
+      "symbol": "GREENASIA",
+      "instrument_name": "Green Asia Impex",
+      "isin": "INE1WDS01018"
     },
     {
       "ipo_name": "Acme Universal Safezone 9 IPO",
@@ -73,62 +157,6 @@
       "isin": "INE0RNF01016"
     },
     {
-      "ipo_name": "Acevector IPO(Snapdeal)",
-      "status": "open",
-      "symbol": "ACEVECTOR",
-      "instrument_name": "Acevector IPO(Snapdeal)",
-      "isin": "INE580P01029"
-    },
-    {
-      "ipo_name": "Sai Urja Indo Ventures IPO",
-      "status": "open",
-      "symbol": "SAIURJA",
-      "instrument_name": "Sai Urja Indo Ventures",
-      "isin": "INE1LLG01019"
-    },
-    {
-      "ipo_name": "Runwal Enterprises IPO",
-      "status": "open",
-      "symbol": "RUNWALENTR",
-      "instrument_name": "Runwal Enterprises",
-      "isin": "INE804W01029"
-    },
-    {
-      "ipo_name": "Orient Cables (India) IPO",
-      "status": "open",
-      "symbol": "ORIENTCABL",
-      "instrument_name": "Orient Cables (India)",
-      "isin": "INE0J1N01028"
-    },
-    {
-      "ipo_name": "Himalayan Solar IPO",
-      "status": "open",
-      "symbol": "HIMALAYAN",
-      "instrument_name": "Himalayan Solar",
-      "isin": "INE1B7I01014"
-    },
-    {
-      "ipo_name": "German Green Steel & Power IPO",
-      "status": "open",
-      "symbol": "GERMAN",
-      "instrument_name": "German Green Steel & Power",
-      "isin": "INE0D4501011"
-    },
-    {
-      "ipo_name": "Dudani Retail IPO",
-      "status": "open",
-      "symbol": "DUDANI",
-      "instrument_name": "Dudani Retail",
-      "isin": "INE1DLN01012"
-    },
-    {
-      "ipo_name": "Bench Mark Infotech Services IPO",
-      "status": "open",
-      "symbol": "BMISL",
-      "instrument_name": "Bench Mark Infotech Services",
-      "isin": "INE2OKU01014"
-    },
-    {
       "ipo_name": "Twinkle Papers IPO",
       "status": "upcoming",
       "symbol": "TWINKLE",
@@ -162,69 +190,6 @@
     "ISIN"
   ],
   "skipped_ipos": [
-    {
-      "id": "sollfege-smart-electronics-limited-ipo",
-      "name": "Sollfege Smart Electronics IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "omara-ventures-india-limited-ipo",
-      "name": "Omara Ventures India IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "sjp-ultrasonic-limited-ipo",
-      "name": "SJP Ultrasonic IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "tna-solutions-limited-ipo",
-      "name": "TNA Solutions IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "dove-soft-limited-ipo",
-      "name": "Dove Soft IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "eventions-limited-ipo",
-      "name": "Eventions IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "papadmalji-agro-foods-limited-ipo",
-      "name": "Papadmalji Agro Foods IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
     {
       "id": "parle-products-limited-ipo",
       "name": "Parle Products IPO",
