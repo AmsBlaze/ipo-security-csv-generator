@@ -1,20 +1,20 @@
 {
-  "generated_utc": "2026-09-29T16:58:21.830014+00:00",
-  "generated_ist": "2026-09-29T22:28:21.830011+05:30",
-  "generated_date_ddmmyyyy": "29/09/2026",
-  "filename": "NSE_CM_security_29092026.csv",
-  "csv_filename": "NSE_CM_security_29092026.csv",
-  "ipo_count": 24,
+  "generated_utc": "2026-09-30T16:56:34.553818+00:00",
+  "generated_ist": "2026-09-30T22:26:34.553815+05:30",
+  "generated_date_ddmmyyyy": "30/09/2026",
+  "filename": "NSE_CM_security_30092026.csv",
+  "csv_filename": "NSE_CM_security_30092026.csv",
+  "ipo_count": 19,
   "skipped_count": 20,
-  "open_count": 21,
+  "open_count": 16,
   "upcoming_count": 3,
   "complete_ipos": [
     {
-      "ipo_name": "TNA Solutions IPO",
+      "ipo_name": "Acme India Industries IPO",
       "status": "open",
-      "symbol": "TNA",
-      "instrument_name": "TNA Solutions",
-      "isin": "INE10VL01011"
+      "symbol": "ACMERAIL",
+      "instrument_name": "Acme India Industries",
+      "isin": "INE162701010"
     },
     {
       "ipo_name": "Paramount Syntex IPO",
@@ -24,67 +24,11 @@
       "isin": "INE0TBC01014"
     },
     {
-      "ipo_name": "Acme India Industries IPO",
+      "ipo_name": "TNA Solutions IPO",
       "status": "open",
-      "symbol": "ACMERAIL",
-      "instrument_name": "Acme India Industries",
-      "isin": "INE162701010"
-    },
-    {
-      "ipo_name": "EverestIMS Technologies IPO",
-      "status": "open",
-      "symbol": "EIMS",
-      "instrument_name": "EverestIMS Technologies",
-      "isin": "INE0YUW01020"
-    },
-    {
-      "ipo_name": "Vishal Nirmiti IPO",
-      "status": "open",
-      "symbol": "VNL",
-      "instrument_name": "Vishal Nirmiti",
-      "isin": "INE1O5L01025"
-    },
-    {
-      "ipo_name": "Sollfege Smart Electronics IPO",
-      "status": "open",
-      "symbol": "SOLLFEGE",
-      "instrument_name": "Sollfege Smart Electronics",
-      "isin": "INE17HG01015"
-    },
-    {
-      "ipo_name": "SJP Ultrasonic IPO",
-      "status": "open",
-      "symbol": "SJP",
-      "instrument_name": "SJP Ultrasonic",
-      "isin": "INE0S4601017"
-    },
-    {
-      "ipo_name": "Omara Ventures India IPO",
-      "status": "open",
-      "symbol": "OMARA",
-      "instrument_name": "Omara Ventures India",
-      "isin": "INE1IA801011"
-    },
-    {
-      "ipo_name": "Nityas Gems & Jewellery IPO",
-      "status": "open",
-      "symbol": "NITYAS",
-      "instrument_name": "Nityas Gems & Jewellery",
-      "isin": "INE211501023"
-    },
-    {
-      "ipo_name": "Eventions IPO",
-      "status": "open",
-      "symbol": "EVENTIONS",
-      "instrument_name": "Eventions",
-      "isin": "INE20M201019"
-    },
-    {
-      "ipo_name": "Dove Soft IPO",
-      "status": "open",
-      "symbol": "DSL",
-      "instrument_name": "Dove Soft",
-      "isin": "INE0NXJ01016"
+      "symbol": "TNA",
+      "instrument_name": "TNA Solutions",
+      "isin": "INE10VL01011"
     },
     {
       "ipo_name": "Shree TNB Polymers IPO",
@@ -94,25 +38,60 @@
       "isin": "INE935K01018"
     },
     {
-      "ipo_name": "Vans Electroengineerings IPO",
+      "ipo_name": "EverestIMS Technologies IPO",
       "status": "open",
-      "symbol": "VANS",
-      "instrument_name": "Vans Electroengineerings",
-      "isin": "INE2SO401011"
+      "symbol": "EIMS",
+      "instrument_name": "EverestIMS Technologies",
+      "isin": "INE0YUW01020"
     },
     {
-      "ipo_name": "Papadmalji Agro Foods IPO",
+      "ipo_name": "Dove Soft IPO",
       "status": "open",
-      "symbol": "PAPADMALJI",
-      "instrument_name": "Papadmalji Agro Foods",
-      "isin": "INE1V7901010"
+      "symbol": "DSL",
+      "instrument_name": "Dove Soft",
+      "isin": "INE0NXJ01016"
     },
     {
-      "ipo_name": "Black Opal Consultants IPO",
+      "ipo_name": "Eventions IPO",
       "status": "open",
-      "symbol": "BLACKOPAL",
-      "instrument_name": "Black Opal Consultants",
-      "isin": "INE0M3101012"
+      "symbol": "EVENTIONS",
+      "instrument_name": "Eventions",
+      "isin": "INE20M201019"
+    },
+    {
+      "ipo_name": "Nityas Gems & Jewellery IPO",
+      "status": "open",
+      "symbol": "NITYAS",
+      "instrument_name": "Nityas Gems & Jewellery",
+      "isin": "INE211501023"
+    },
+    {
+      "ipo_name": "Omara Ventures India IPO",
+      "status": "open",
+      "symbol": "OMARA",
+      "instrument_name": "Omara Ventures India",
+      "isin": "INE1IA801011"
+    },
+    {
+      "ipo_name": "SJP Ultrasonic IPO",
+      "status": "open",
+      "symbol": "SJP",
+      "instrument_name": "SJP Ultrasonic",
+      "isin": "INE0S4601017"
+    },
+    {
+      "ipo_name": "Sollfege Smart Electronics IPO",
+      "status": "open",
+      "symbol": "SOLLFEGE",
+      "instrument_name": "Sollfege Smart Electronics",
+      "isin": "INE17HG01015"
+    },
+    {
+      "ipo_name": "Vishal Nirmiti IPO",
+      "status": "open",
+      "symbol": "VNL",
+      "instrument_name": "Vishal Nirmiti",
+      "isin": "INE1O5L01025"
     },
     {
       "ipo_name": "Green Asia Impex IPO",
@@ -122,39 +101,25 @@
       "isin": "INE1WDS01018"
     },
     {
-      "ipo_name": "Acme Universal Safezone 9 IPO",
+      "ipo_name": "Black Opal Consultants IPO",
       "status": "open",
-      "symbol": "ACMEUNIV",
-      "instrument_name": "Acme Universal Safezone 9",
-      "isin": "INE1KUL01020"
+      "symbol": "BLACKOPAL",
+      "instrument_name": "Black Opal Consultants",
+      "isin": "INE0M3101012"
     },
     {
-      "ipo_name": "SRIT India IPO",
+      "ipo_name": "Papadmalji Agro Foods IPO",
       "status": "open",
-      "symbol": "SRIT",
-      "instrument_name": "SRIT India",
-      "isin": "INE307K01028"
+      "symbol": "PAPADMALJI",
+      "instrument_name": "Papadmalji Agro Foods",
+      "isin": "INE1V7901010"
     },
     {
-      "ipo_name": "Shivchem Agro IPO",
+      "ipo_name": "Vans Electroengineerings IPO",
       "status": "open",
-      "symbol": "SHIVCHEM",
-      "instrument_name": "Shivchem Agro",
-      "isin": "INE18CU01023"
-    },
-    {
-      "ipo_name": "Shah Investor’s Home IPO",
-      "status": "open",
-      "symbol": "SHAHINVEST",
-      "instrument_name": "Shah Investor’s Home",
-      "isin": "INE029N01014"
-    },
-    {
-      "ipo_name": "Pind Hospitality IPO",
-      "status": "open",
-      "symbol": "PIND",
-      "instrument_name": "Pind Hospitality",
-      "isin": "INE0RNF01016"
+      "symbol": "VANS",
+      "instrument_name": "Vans Electroengineerings",
+      "isin": "INE2SO401011"
     },
     {
       "ipo_name": "Twinkle Papers IPO",
