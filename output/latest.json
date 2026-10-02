@@ -1,14 +1,21 @@
 {
-  "generated_utc": "2026-10-01T17:28:02.403720+00:00",
-  "generated_ist": "2026-10-01T22:58:02.403717+05:30",
-  "generated_date_ddmmyyyy": "01/10/2026",
-  "filename": "NSE_CM_security_01102026.csv",
-  "csv_filename": "NSE_CM_security_01102026.csv",
-  "ipo_count": 15,
+  "generated_utc": "2026-10-02T16:46:45.876108+00:00",
+  "generated_ist": "2026-10-02T22:16:45.876105+05:30",
+  "generated_date_ddmmyyyy": "02/10/2026",
+  "filename": "NSE_CM_security_02102026.csv",
+  "csv_filename": "NSE_CM_security_02102026.csv",
+  "ipo_count": 16,
   "skipped_count": 20,
-  "open_count": 12,
+  "open_count": 13,
   "upcoming_count": 3,
   "complete_ipos": [
+    {
+      "ipo_name": "R.K.Fashion Accessories IPO",
+      "status": "open",
+      "symbol": "RKFAL",
+      "instrument_name": "R.K.Fashion Accessories",
+      "isin": "INE2O2Y01016"
+    },
     {
       "ipo_name": "Acme India Industries IPO",
       "status": "open",
