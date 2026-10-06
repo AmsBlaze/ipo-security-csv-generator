@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-10-06T05:25:22.430224+00:00",
-  "generated_ist": "2026-10-06T10:55:22.430221+05:30",
+  "generated_utc": "2026-10-06T17:21:47.084042+00:00",
+  "generated_ist": "2026-10-06T22:51:47.084040+05:30",
   "generated_date_ddmmyyyy": "06/10/2026",
   "filename": "NSE_CM_security_06102026.csv",
   "csv_filename": "NSE_CM_security_06102026.csv",
-  "ipo_count": 7,
+  "ipo_count": 4,
   "skipped_count": 20,
-  "open_count": 4,
+  "open_count": 1,
   "upcoming_count": 3,
   "complete_ipos": [
     {
@@ -15,27 +15,6 @@
       "symbol": "RKFAL",
       "instrument_name": "R.K.Fashion Accessories",
       "isin": "INE2O2Y01016"
-    },
-    {
-      "ipo_name": "Acme India Industries IPO",
-      "status": "open",
-      "symbol": "ACMERAIL",
-      "instrument_name": "Acme India Industries",
-      "isin": "INE162701010"
-    },
-    {
-      "ipo_name": "Paramount Syntex IPO",
-      "status": "open",
-      "symbol": "PARASYNTEX",
-      "instrument_name": "Paramount Syntex",
-      "isin": "INE0TBC01014"
-    },
-    {
-      "ipo_name": "TNA Solutions IPO",
-      "status": "open",
-      "symbol": "TNA",
-      "instrument_name": "TNA Solutions",
-      "isin": "INE10VL01011"
     },
     {
       "ipo_name": "Twinkle Papers IPO",
