@@ -1,14 +1,21 @@
 {
-  "generated_utc": "2026-10-07T17:56:08.311374+00:00",
-  "generated_ist": "2026-10-07T23:26:08.311371+05:30",
-  "generated_date_ddmmyyyy": "07/10/2026",
-  "filename": "NSE_CM_security_07102026.csv",
-  "csv_filename": "NSE_CM_security_07102026.csv",
-  "ipo_count": 3,
+  "generated_utc": "2026-10-08T17:57:53.914155+00:00",
+  "generated_ist": "2026-10-08T23:27:53.914152+05:30",
+  "generated_date_ddmmyyyy": "08/10/2026",
+  "filename": "NSE_CM_security_08102026.csv",
+  "csv_filename": "NSE_CM_security_08102026.csv",
+  "ipo_count": 4,
   "skipped_count": 21,
   "open_count": 0,
-  "upcoming_count": 3,
+  "upcoming_count": 4,
   "complete_ipos": [
+    {
+      "ipo_name": "Ravita Engineering Services IPO",
+      "status": "upcoming",
+      "symbol": "RAVITA",
+      "instrument_name": "Ravita Engineering Services",
+      "isin": "INE1UEL01023"
+    },
     {
       "ipo_name": "Twinkle Papers IPO",
       "status": "upcoming",
