@@ -1,20 +1,34 @@
 {
-  "generated_utc": "2026-10-08T17:57:53.914155+00:00",
-  "generated_ist": "2026-10-08T23:27:53.914152+05:30",
-  "generated_date_ddmmyyyy": "08/10/2026",
-  "filename": "NSE_CM_security_08102026.csv",
-  "csv_filename": "NSE_CM_security_08102026.csv",
-  "ipo_count": 4,
+  "generated_utc": "2026-10-09T17:31:16.213311+00:00",
+  "generated_ist": "2026-10-09T23:01:16.213309+05:30",
+  "generated_date_ddmmyyyy": "09/10/2026",
+  "filename": "NSE_CM_security_09102026.csv",
+  "csv_filename": "NSE_CM_security_09102026.csv",
+  "ipo_count": 6,
   "skipped_count": 21,
-  "open_count": 0,
-  "upcoming_count": 4,
+  "open_count": 3,
+  "upcoming_count": 3,
   "complete_ipos": [
     {
+      "ipo_name": "HD Fire Protect IPO",
+      "status": "open",
+      "symbol": "HDFIRE",
+      "instrument_name": "HD Fire Protect",
+      "isin": "INE18AK01028"
+    },
+    {
       "ipo_name": "Ravita Engineering Services IPO",
-      "status": "upcoming",
+      "status": "open",
       "symbol": "RAVITA",
       "instrument_name": "Ravita Engineering Services",
       "isin": "INE1UEL01023"
+    },
+    {
+      "ipo_name": "Vaibhav Vyapaar IPO",
+      "status": "open",
+      "symbol": "LOANFRONT",
+      "instrument_name": "Vaibhav Vyapaar",
+      "isin": "INE1KAA01025"
     },
     {
       "ipo_name": "Twinkle Papers IPO",
@@ -51,8 +65,8 @@
   ],
   "skipped_ipos": [
     {
-      "id": "hd-fire-protect-limited-ipo",
-      "name": "HD Fire Protect IPO",
+      "id": "fusion-cx-limited-ipo",
+      "name": "Fusion CX IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
