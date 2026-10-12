@@ -1,14 +1,21 @@
 {
-  "generated_utc": "2026-10-11T16:43:53.604278+00:00",
-  "generated_ist": "2026-10-11T22:13:53.604276+05:30",
-  "generated_date_ddmmyyyy": "11/10/2026",
-  "filename": "NSE_CM_security_11102026.csv",
-  "csv_filename": "NSE_CM_security_11102026.csv",
-  "ipo_count": 6,
-  "skipped_count": 21,
-  "open_count": 3,
+  "generated_utc": "2026-10-12T20:23:53.732720+00:00",
+  "generated_ist": "2026-10-13T01:53:53.732718+05:30",
+  "generated_date_ddmmyyyy": "13/10/2026",
+  "filename": "NSE_CM_security_13102026.csv",
+  "csv_filename": "NSE_CM_security_13102026.csv",
+  "ipo_count": 7,
+  "skipped_count": 25,
+  "open_count": 4,
   "upcoming_count": 3,
   "complete_ipos": [
+    {
+      "ipo_name": "Fusion CX IPO",
+      "status": "open",
+      "symbol": "FUSIONCX",
+      "instrument_name": "Fusion CX",
+      "isin": "INE0N2201019"
+    },
     {
       "ipo_name": "HD Fire Protect IPO",
       "status": "open",
@@ -65,8 +72,44 @@
   ],
   "skipped_ipos": [
     {
-      "id": "fusion-cx-limited-ipo",
-      "name": "Fusion CX IPO",
+      "id": "bonfiglioli-transmissions-limted-ipopo",
+      "name": "Bonfiglioli Transmissions IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "zetwerk-manufacturing-limted-ipo",
+      "name": "Zetwerk Manufacturing IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "shellz-india-limited-ipo",
+      "name": "Shellz India IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "tonbo-imaging-india-limited-ipo",
+      "name": "Tonbo Imaging India IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "sahajanand-medical-technologies-ipo",
+      "name": "Sahajanand Medical Technologies IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
