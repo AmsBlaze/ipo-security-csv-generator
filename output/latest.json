@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-10-13T18:27:05.368254+00:00",
-  "generated_ist": "2026-10-13T23:57:05.368250+05:30",
-  "generated_date_ddmmyyyy": "13/10/2026",
-  "filename": "NSE_CM_security_13102026.csv",
-  "csv_filename": "NSE_CM_security_13102026.csv",
-  "ipo_count": 9,
-  "skipped_count": 23,
-  "open_count": 6,
+  "generated_utc": "2026-10-14T15:56:04.311167+00:00",
+  "generated_ist": "2026-10-14T21:26:04.311164+05:30",
+  "generated_date_ddmmyyyy": "14/10/2026",
+  "filename": "NSE_CM_security_14102026.csv",
+  "csv_filename": "NSE_CM_security_14102026.csv",
+  "ipo_count": 12,
+  "skipped_count": 20,
+  "open_count": 9,
   "upcoming_count": 3,
   "complete_ipos": [
     {
@@ -17,11 +17,32 @@
       "isin": "INE28SO01013"
     },
     {
+      "ipo_name": "Sahajanand Medical Technologies IPO",
+      "status": "open",
+      "symbol": "SMT",
+      "instrument_name": "Sahajanand Medical Technologies",
+      "isin": "INE356Y01018"
+    },
+    {
+      "ipo_name": "Shellz India IPO",
+      "status": "open",
+      "symbol": "SHELLZ",
+      "instrument_name": "Shellz India",
+      "isin": "INE0Z7301016"
+    },
+    {
       "ipo_name": "Tonbo Imaging India IPO",
       "status": "open",
       "symbol": "TONBO",
       "instrument_name": "Tonbo Imaging India",
       "isin": "INE0LDG01026"
+    },
+    {
+      "ipo_name": "Zetwerk Manufacturing IPO",
+      "status": "open",
+      "symbol": "ZETWERK",
+      "instrument_name": "Zetwerk Manufacturing",
+      "isin": "INE09PO01019"
     },
     {
       "ipo_name": "Fusion CX IPO",
@@ -85,33 +106,6 @@
     "ISIN"
   ],
   "skipped_ipos": [
-    {
-      "id": "zetwerk-manufacturing-limted-ipo",
-      "name": "Zetwerk Manufacturing IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "shellz-india-limited-ipo",
-      "name": "Shellz India IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "sahajanand-medical-technologies-ipo",
-      "name": "Sahajanand Medical Technologies IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
     {
       "id": "parle-products-limited-ipo",
       "name": "Parle Products IPO",
