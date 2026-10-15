@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-10-14T15:56:04.311167+00:00",
-  "generated_ist": "2026-10-14T21:26:04.311164+05:30",
-  "generated_date_ddmmyyyy": "14/10/2026",
-  "filename": "NSE_CM_security_14102026.csv",
-  "csv_filename": "NSE_CM_security_14102026.csv",
-  "ipo_count": 12,
-  "skipped_count": 20,
-  "open_count": 9,
+  "generated_utc": "2026-10-15T15:42:00.526811+00:00",
+  "generated_ist": "2026-10-15T21:12:00.526809+05:30",
+  "generated_date_ddmmyyyy": "15/10/2026",
+  "filename": "NSE_CM_security_15102026.csv",
+  "csv_filename": "NSE_CM_security_15102026.csv",
+  "ipo_count": 10,
+  "skipped_count": 21,
+  "open_count": 7,
   "upcoming_count": 3,
   "complete_ipos": [
     {
@@ -59,20 +59,6 @@
       "isin": "INE1UEL01023"
     },
     {
-      "ipo_name": "HD Fire Protect IPO",
-      "status": "open",
-      "symbol": "HDFIRE",
-      "instrument_name": "HD Fire Protect",
-      "isin": "INE18AK01028"
-    },
-    {
-      "ipo_name": "Vaibhav Vyapaar IPO",
-      "status": "open",
-      "symbol": "LOANFRONT",
-      "instrument_name": "Vaibhav Vyapaar",
-      "isin": "INE1KAA01025"
-    },
-    {
       "ipo_name": "Twinkle Papers IPO",
       "status": "upcoming",
       "symbol": "TWINKLE",
@@ -107,8 +93,8 @@
   ],
   "skipped_ipos": [
     {
-      "id": "parle-products-limited-ipo",
-      "name": "Parle Products IPO",
+      "id": "paras-healthcare-limited-ipo",
+      "name": "Paras Healthcare IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
@@ -118,6 +104,15 @@
     {
       "id": "reliance-jio-limited-ipo",
       "name": "Reliance Jio IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "parle-products-limited-ipo",
+      "name": "Parle Products IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
