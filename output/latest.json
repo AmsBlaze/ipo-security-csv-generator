@@ -1,14 +1,21 @@
 {
-  "generated_utc": "2026-10-15T15:42:00.526811+00:00",
-  "generated_ist": "2026-10-15T21:12:00.526809+05:30",
-  "generated_date_ddmmyyyy": "15/10/2026",
-  "filename": "NSE_CM_security_15102026.csv",
-  "csv_filename": "NSE_CM_security_15102026.csv",
-  "ipo_count": 10,
-  "skipped_count": 21,
-  "open_count": 7,
+  "generated_utc": "2026-10-16T15:28:02.289358+00:00",
+  "generated_ist": "2026-10-16T20:58:02.289355+05:30",
+  "generated_date_ddmmyyyy": "16/10/2026",
+  "filename": "NSE_CM_security_16102026.csv",
+  "csv_filename": "NSE_CM_security_16102026.csv",
+  "ipo_count": 9,
+  "skipped_count": 20,
+  "open_count": 6,
   "upcoming_count": 3,
   "complete_ipos": [
+    {
+      "ipo_name": "Reliance Jio IPO",
+      "status": "open",
+      "symbol": "JPL",
+      "instrument_name": "Reliance Jio",
+      "isin": "INE0BJO01010"
+    },
     {
       "ipo_name": "Bonfiglioli Transmissions IPO",
       "status": "open",
@@ -43,20 +50,6 @@
       "symbol": "ZETWERK",
       "instrument_name": "Zetwerk Manufacturing",
       "isin": "INE09PO01019"
-    },
-    {
-      "ipo_name": "Fusion CX IPO",
-      "status": "open",
-      "symbol": "FUSIONCX",
-      "instrument_name": "Fusion CX",
-      "isin": "INE0N2201019"
-    },
-    {
-      "ipo_name": "Ravita Engineering Services IPO",
-      "status": "open",
-      "symbol": "RAVITA",
-      "instrument_name": "Ravita Engineering Services",
-      "isin": "INE1UEL01023"
     },
     {
       "ipo_name": "Twinkle Papers IPO",
@@ -95,15 +88,6 @@
     {
       "id": "paras-healthcare-limited-ipo",
       "name": "Paras Healthcare IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "reliance-jio-limited-ipo",
-      "name": "Reliance Jio IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
