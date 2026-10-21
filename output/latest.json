@@ -1,27 +1,27 @@
 {
-  "generated_utc": "2026-10-20T15:47:40.132748+00:00",
-  "generated_ist": "2026-10-20T21:17:40.132745+05:30",
-  "generated_date_ddmmyyyy": "20/10/2026",
-  "filename": "NSE_CM_security_20102026.csv",
-  "csv_filename": "NSE_CM_security_20102026.csv",
+  "generated_utc": "2026-10-21T16:03:57.079634+00:00",
+  "generated_ist": "2026-10-21T21:33:57.079631+05:30",
+  "generated_date_ddmmyyyy": "21/10/2026",
+  "filename": "NSE_CM_security_21102026.csv",
+  "csv_filename": "NSE_CM_security_21102026.csv",
   "ipo_count": 5,
-  "skipped_count": 20,
+  "skipped_count": 21,
   "open_count": 2,
   "upcoming_count": 3,
   "complete_ipos": [
-    {
-      "ipo_name": "Paras Healthcare IPO",
-      "status": "open",
-      "symbol": "PARASHLTH",
-      "instrument_name": "Paras Healthcare",
-      "isin": "INE661T01029"
-    },
     {
       "ipo_name": "Reliance Jio IPO",
       "status": "open",
       "symbol": "JPL",
       "instrument_name": "Reliance Jio",
       "isin": "INE0BJO01010"
+    },
+    {
+      "ipo_name": "Paras Healthcare IPO",
+      "status": "open",
+      "symbol": "PARASHLTH",
+      "instrument_name": "Paras Healthcare",
+      "isin": "INE661T01029"
     },
     {
       "ipo_name": "Twinkle Papers IPO",
@@ -57,6 +57,15 @@
     "ISIN"
   ],
   "skipped_ipos": [
+    {
+      "id": "eaaa-india-alternatives-limited-ipo",
+      "name": "EAAA India Alternatives IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
     {
       "id": "core4-engineers-limited-ipo",
       "name": "Core4 Engineers IPO",
@@ -230,7 +239,7 @@
     },
     {
       "id": "go-first-go-airlines-ipo",
-      "name": "Go First (Go Airlines) IPO",
+      "name": "Go Airlines IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
