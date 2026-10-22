@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-10-21T16:03:57.079634+00:00",
-  "generated_ist": "2026-10-21T21:33:57.079631+05:30",
-  "generated_date_ddmmyyyy": "21/10/2026",
-  "filename": "NSE_CM_security_21102026.csv",
-  "csv_filename": "NSE_CM_security_21102026.csv",
-  "ipo_count": 5,
-  "skipped_count": 21,
-  "open_count": 2,
+  "generated_utc": "2026-10-22T15:59:09.516583+00:00",
+  "generated_ist": "2026-10-22T21:29:09.516580+05:30",
+  "generated_date_ddmmyyyy": "22/10/2026",
+  "filename": "NSE_CM_security_22102026.csv",
+  "csv_filename": "NSE_CM_security_22102026.csv",
+  "ipo_count": 6,
+  "skipped_count": 22,
+  "open_count": 3,
   "upcoming_count": 3,
   "complete_ipos": [
     {
@@ -15,6 +15,13 @@
       "symbol": "JPL",
       "instrument_name": "Reliance Jio",
       "isin": "INE0BJO01010"
+    },
+    {
+      "ipo_name": "Core4 Engineers IPO",
+      "status": "open",
+      "symbol": "CORE4",
+      "instrument_name": "Core4 Engineers",
+      "isin": "INE1RY601016"
     },
     {
       "ipo_name": "Paras Healthcare IPO",
@@ -58,8 +65,8 @@
   ],
   "skipped_ipos": [
     {
-      "id": "eaaa-india-alternatives-limited-ipo",
-      "name": "EAAA India Alternatives IPO",
+      "id": "sfc-environmental-technologies-limited-ipo",
+      "name": "SFC Environmental Technologies IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
@@ -67,8 +74,17 @@
       ]
     },
     {
-      "id": "core4-engineers-limited-ipo",
-      "name": "Core4 Engineers IPO",
+      "id": "bls-polymers-limited-ipo",
+      "name": "BLS Polymers IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
+      "id": "eaaa-india-alternatives-limited-ipo",
+      "name": "EAAA India Alternatives IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
