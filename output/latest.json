@@ -1,14 +1,35 @@
 {
-  "generated_utc": "2026-10-26T17:33:28.285246+00:00",
-  "generated_ist": "2026-10-26T23:03:28.285244+05:30",
-  "generated_date_ddmmyyyy": "26/10/2026",
-  "filename": "NSE_CM_security_26102026.csv",
-  "csv_filename": "NSE_CM_security_26102026.csv",
-  "ipo_count": 8,
-  "skipped_count": 22,
-  "open_count": 5,
+  "generated_utc": "2026-10-27T16:48:50.504330+00:00",
+  "generated_ist": "2026-10-27T22:18:50.504327+05:30",
+  "generated_date_ddmmyyyy": "27/10/2026",
+  "filename": "NSE_CM_security_27102026.csv",
+  "csv_filename": "NSE_CM_security_27102026.csv",
+  "ipo_count": 10,
+  "skipped_count": 20,
+  "open_count": 7,
   "upcoming_count": 3,
   "complete_ipos": [
+    {
+      "ipo_name": "Ajwa Projects IPO",
+      "status": "open",
+      "symbol": "AJWA",
+      "instrument_name": "Ajwa Projects",
+      "isin": "INE1NMO01017"
+    },
+    {
+      "ipo_name": "Carver Roboweld IPO",
+      "status": "open",
+      "symbol": "CRL",
+      "instrument_name": "Carver Roboweld",
+      "isin": "INE1FY301017"
+    },
+    {
+      "ipo_name": "M.K.Sons Fine Jewels IPO",
+      "status": "open",
+      "symbol": "MKSONS",
+      "instrument_name": "M.K.Sons Fine Jewels",
+      "isin": "INE2IXO01012"
+    },
     {
       "ipo_name": "BLS Polymers IPO",
       "status": "open",
@@ -36,13 +57,6 @@
       "symbol": "EDELALTS",
       "instrument_name": "EAAA India Alternatives",
       "isin": "INE528L01027"
-    },
-    {
-      "ipo_name": "Core4 Engineers IPO",
-      "status": "open",
-      "symbol": "CORE4",
-      "instrument_name": "Core4 Engineers",
-      "isin": "INE1RY601016"
     },
     {
       "ipo_name": "Twinkle Papers IPO",
@@ -81,24 +95,6 @@
     {
       "id": "bombay-coated-and-special-steels-limited-ipo",
       "name": "Bombay Coated & Special Steels IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "carver-roboweld-limited-ipo",
-      "name": "Carver Roboweld IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "mksons-fine-jewels-limited",
-      "name": "M.K.Sons Fine Jewels IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
