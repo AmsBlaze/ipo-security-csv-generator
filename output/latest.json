@@ -1,14 +1,42 @@
 {
-  "generated_utc": "2026-10-28T17:16:41.679845+00:00",
-  "generated_ist": "2026-10-28T22:46:41.679843+05:30",
-  "generated_date_ddmmyyyy": "28/10/2026",
-  "filename": "NSE_CM_security_28102026.csv",
-  "csv_filename": "NSE_CM_security_28102026.csv",
-  "ipo_count": 10,
-  "skipped_count": 20,
-  "open_count": 8,
+  "generated_utc": "2026-10-29T17:30:07.436114+00:00",
+  "generated_ist": "2026-10-29T23:00:07.436112+05:30",
+  "generated_date_ddmmyyyy": "29/10/2026",
+  "filename": "NSE_CM_security_29102026.csv",
+  "csv_filename": "NSE_CM_security_29102026.csv",
+  "ipo_count": 11,
+  "skipped_count": 21,
+  "open_count": 9,
   "upcoming_count": 2,
   "complete_ipos": [
+    {
+      "ipo_name": "HGS (India) IPO",
+      "status": "open",
+      "symbol": "HGSINDIALT",
+      "instrument_name": "HGS (India)",
+      "isin": "INE813R01012"
+    },
+    {
+      "ipo_name": "Johnsoncab Electricals IPO",
+      "status": "open",
+      "symbol": "JOHNSONCAB",
+      "instrument_name": "Johnsoncab Electricals",
+      "isin": "INE1ZSR01011"
+    },
+    {
+      "ipo_name": "Maxwell Engineering Solutions IPO",
+      "status": "open",
+      "symbol": "MAXENGS",
+      "instrument_name": "Maxwell Engineering Solutions",
+      "isin": "INE1W3F01014"
+    },
+    {
+      "ipo_name": "Vectras Enprocon IPO",
+      "status": "open",
+      "symbol": "VECTRAS",
+      "instrument_name": "Vectras Enprocon",
+      "isin": "INE1FD201014"
+    },
     {
       "ipo_name": "Antala Industries IPO",
       "status": "open",
@@ -45,27 +73,6 @@
       "isin": "INE2IXO01012"
     },
     {
-      "ipo_name": "BLS Polymers IPO",
-      "status": "open",
-      "symbol": "BLSPOLY",
-      "instrument_name": "BLS Polymers",
-      "isin": "INE0ZCQ01019"
-    },
-    {
-      "ipo_name": "SFC Environmental Technologies IPO",
-      "status": "open",
-      "symbol": "SFCTECH",
-      "instrument_name": "SFC Environmental Technologies",
-      "isin": "INE0PKN01028"
-    },
-    {
-      "ipo_name": "Wiscon Industries IPO",
-      "status": "open",
-      "symbol": "WISCON",
-      "instrument_name": "Wiscon Industries",
-      "isin": "INE0NZ501012"
-    },
-    {
       "ipo_name": "Sri Priyanka Geo Commex IPO",
       "status": "upcoming",
       "symbol": "SPGCL",
@@ -92,6 +99,15 @@
     "ISIN"
   ],
   "skipped_ipos": [
+    {
+      "id": "vedant-poly-fabs-limited-ipo",
+      "name": "Vedant Poly Fabs IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
     {
       "id": "parle-products-limited-ipo",
       "name": "Parle Products IPO",
