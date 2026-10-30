@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-10-29T17:30:07.436114+00:00",
-  "generated_ist": "2026-10-29T23:00:07.436112+05:30",
-  "generated_date_ddmmyyyy": "29/10/2026",
-  "filename": "NSE_CM_security_29102026.csv",
-  "csv_filename": "NSE_CM_security_29102026.csv",
-  "ipo_count": 11,
+  "generated_utc": "2026-10-30T17:06:39.548654+00:00",
+  "generated_ist": "2026-10-30T22:36:39.548651+05:30",
+  "generated_date_ddmmyyyy": "30/10/2026",
+  "filename": "NSE_CM_security_30102026.csv",
+  "csv_filename": "NSE_CM_security_30102026.csv",
+  "ipo_count": 8,
   "skipped_count": 21,
-  "open_count": 9,
+  "open_count": 6,
   "upcoming_count": 2,
   "complete_ipos": [
     {
@@ -50,27 +50,6 @@
       "symbol": "BCSSL",
       "instrument_name": "Bombay Coated & Special Steels",
       "isin": "INE0XFY01011"
-    },
-    {
-      "ipo_name": "Ajwa Projects IPO",
-      "status": "open",
-      "symbol": "AJWA",
-      "instrument_name": "Ajwa Projects",
-      "isin": "INE1NMO01017"
-    },
-    {
-      "ipo_name": "Carver Roboweld IPO",
-      "status": "open",
-      "symbol": "CRL",
-      "instrument_name": "Carver Roboweld",
-      "isin": "INE1FY301017"
-    },
-    {
-      "ipo_name": "M.K.Sons Fine Jewels IPO",
-      "status": "open",
-      "symbol": "MKSONS",
-      "instrument_name": "M.K.Sons Fine Jewels",
-      "isin": "INE2IXO01012"
     },
     {
       "ipo_name": "Sri Priyanka Geo Commex IPO",
