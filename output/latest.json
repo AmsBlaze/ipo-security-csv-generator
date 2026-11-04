@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-11-03T18:37:19.491172+00:00",
-  "generated_ist": "2026-11-04T00:07:19.491170+05:30",
-  "generated_date_ddmmyyyy": "04/11/2026",
-  "filename": "NSE_CM_security_04112026.csv",
-  "csv_filename": "NSE_CM_security_04112026.csv",
-  "ipo_count": 4,
+  "generated_utc": "2026-11-04T18:46:22.338604+00:00",
+  "generated_ist": "2026-11-05T00:16:22.338601+05:30",
+  "generated_date_ddmmyyyy": "05/11/2026",
+  "filename": "NSE_CM_security_05112026.csv",
+  "csv_filename": "NSE_CM_security_05112026.csv",
+  "ipo_count": 3,
   "skipped_count": 20,
-  "open_count": 2,
+  "open_count": 1,
   "upcoming_count": 2,
   "complete_ipos": [
     {
@@ -15,13 +15,6 @@
       "symbol": "ANTALA",
       "instrument_name": "Antala Industries",
       "isin": "INE15Z101013"
-    },
-    {
-      "ipo_name": "Vedant Poly Fabs IPO",
-      "status": "open",
-      "symbol": "VPFL",
-      "instrument_name": "Vedant Poly Fabs",
-      "isin": "INE2RWX01016"
     },
     {
       "ipo_name": "Sri Priyanka Geo Commex IPO",
