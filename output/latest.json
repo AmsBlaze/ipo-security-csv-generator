@@ -1,11 +1,11 @@
 {
-  "generated_utc": "2026-11-15T17:55:57.858593+00:00",
-  "generated_ist": "2026-11-15T23:25:57.858590+05:30",
-  "generated_date_ddmmyyyy": "15/11/2026",
-  "filename": "NSE_CM_security_15112026.csv",
-  "csv_filename": "NSE_CM_security_15112026.csv",
+  "generated_utc": "2026-11-16T21:11:49.345240+00:00",
+  "generated_ist": "2026-11-17T02:41:49.345236+05:30",
+  "generated_date_ddmmyyyy": "17/11/2026",
+  "filename": "NSE_CM_security_17112026.csv",
+  "csv_filename": "NSE_CM_security_17112026.csv",
   "ipo_count": 2,
-  "skipped_count": 20,
+  "skipped_count": 21,
   "open_count": 0,
   "upcoming_count": 2,
   "complete_ipos": [
@@ -36,6 +36,15 @@
     "ISIN"
   ],
   "skipped_ipos": [
+    {
+      "id": "crystal-crop-protection-limited-ipo",
+      "name": "Crystal Crop Protection IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
     {
       "id": "parle-products-limited-ipo",
       "name": "Parle Products IPO",
