@@ -1,27 +1,20 @@
 {
-  "generated_utc": "2026-11-22T18:37:29.616714+00:00",
-  "generated_ist": "2026-11-23T00:07:29.616711+05:30",
-  "generated_date_ddmmyyyy": "23/11/2026",
-  "filename": "NSE_CM_security_23112026.csv",
-  "csv_filename": "NSE_CM_security_23112026.csv",
-  "ipo_count": 4,
+  "generated_utc": "2026-11-23T22:51:59.842345+00:00",
+  "generated_ist": "2026-11-24T04:21:59.842341+05:30",
+  "generated_date_ddmmyyyy": "24/11/2026",
+  "filename": "NSE_CM_security_24112026.csv",
+  "csv_filename": "NSE_CM_security_24112026.csv",
+  "ipo_count": 3,
   "skipped_count": 23,
-  "open_count": 2,
+  "open_count": 1,
   "upcoming_count": 2,
   "complete_ipos": [
     {
-      "ipo_name": "Mahanadi Coalfields IPO",
+      "ipo_name": "Shree Siddhivinayak Greentech Industries IPO",
       "status": "open",
-      "symbol": "MAHACOAL",
-      "instrument_name": "Mahanadi Coalfields",
-      "isin": "INE03K401026"
-    },
-    {
-      "ipo_name": "Watrana Rentals IPO",
-      "status": "open",
-      "symbol": "WATRANA",
-      "instrument_name": "Watrana Rentals",
-      "isin": "INE11NS01011"
+      "symbol": "SHREESIDHI",
+      "instrument_name": "Shree Siddhivinayak Greentech Industries",
+      "isin": "INE1NVJ01026"
     },
     {
       "ipo_name": "Sri Priyanka Geo Commex IPO",
@@ -51,6 +44,15 @@
   ],
   "skipped_ipos": [
     {
+      "id": "matangi-rubber-limited-ipo",
+      "name": "Matangi Rubber IPO",
+      "status": "upcoming",
+      "missing_fields": [
+        "symbol",
+        "isin"
+      ]
+    },
+    {
       "id": "integris-medtech-limited-ipo",
       "name": "Integris Medtech IPO",
       "status": "upcoming",
@@ -62,15 +64,6 @@
     {
       "id": "foodlink-fandb-holdings-india-limited-ipo",
       "name": "Foodlink F&B Holdings (India) IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "shree-siddhivinayak-greentech-industries-limited-ipo",
-      "name": "Shree Siddhivinayak Greentech Industries IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
