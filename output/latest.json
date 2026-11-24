@@ -1,14 +1,21 @@
 {
-  "generated_utc": "2026-11-23T22:51:59.842345+00:00",
-  "generated_ist": "2026-11-24T04:21:59.842341+05:30",
-  "generated_date_ddmmyyyy": "24/11/2026",
-  "filename": "NSE_CM_security_24112026.csv",
-  "csv_filename": "NSE_CM_security_24112026.csv",
-  "ipo_count": 3,
-  "skipped_count": 23,
-  "open_count": 1,
+  "generated_utc": "2026-11-24T21:27:26.955205+00:00",
+  "generated_ist": "2026-11-25T02:57:26.955203+05:30",
+  "generated_date_ddmmyyyy": "25/11/2026",
+  "filename": "NSE_CM_security_25112026.csv",
+  "csv_filename": "NSE_CM_security_25112026.csv",
+  "ipo_count": 4,
+  "skipped_count": 22,
+  "open_count": 2,
   "upcoming_count": 2,
   "complete_ipos": [
+    {
+      "ipo_name": "Foodlink F&B Holdings (India) IPO",
+      "status": "open",
+      "symbol": "FOODLINK",
+      "instrument_name": "Foodlink F&B Holdings (India)",
+      "isin": "INE0PJD01021"
+    },
     {
       "ipo_name": "Shree Siddhivinayak Greentech Industries IPO",
       "status": "open",
@@ -55,15 +62,6 @@
     {
       "id": "integris-medtech-limited-ipo",
       "name": "Integris Medtech IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "foodlink-fandb-holdings-india-limited-ipo",
-      "name": "Foodlink F&B Holdings (India) IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
