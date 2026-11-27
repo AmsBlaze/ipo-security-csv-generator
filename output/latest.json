@@ -1,14 +1,35 @@
 {
-  "generated_utc": "2026-11-26T20:27:18.705527+00:00",
-  "generated_ist": "2026-11-27T01:57:18.705525+05:30",
-  "generated_date_ddmmyyyy": "27/11/2026",
-  "filename": "NSE_CM_security_27112026.csv",
-  "csv_filename": "NSE_CM_security_27112026.csv",
-  "ipo_count": 5,
-  "skipped_count": 24,
-  "open_count": 3,
+  "generated_utc": "2026-11-27T20:11:22.490774+00:00",
+  "generated_ist": "2026-11-28T01:41:22.490770+05:30",
+  "generated_date_ddmmyyyy": "28/11/2026",
+  "filename": "NSE_CM_security_28112026.csv",
+  "csv_filename": "NSE_CM_security_28112026.csv",
+  "ipo_count": 7,
+  "skipped_count": 22,
+  "open_count": 5,
   "upcoming_count": 2,
   "complete_ipos": [
+    {
+      "ipo_name": "Monomark Engineering (India) IPO",
+      "status": "open",
+      "symbol": "MONOMARK",
+      "instrument_name": "Monomark Engineering (India)",
+      "isin": "INE1WHW01011"
+    },
+    {
+      "ipo_name": "A J Packaging IPO",
+      "status": "open",
+      "symbol": "AJPACK",
+      "instrument_name": "A J Packaging",
+      "isin": "INE0HTK01014"
+    },
+    {
+      "ipo_name": "Matangi Rubber IPO",
+      "status": "open",
+      "symbol": "MATANGI",
+      "instrument_name": "Matangi Rubber",
+      "isin": "INE1DHT01017"
+    },
     {
       "ipo_name": "Airpro Technology India IPO",
       "status": "open",
@@ -22,13 +43,6 @@
       "symbol": "FOODLINK",
       "instrument_name": "Foodlink F&B Holdings (India)",
       "isin": "INE0PJD01021"
-    },
-    {
-      "ipo_name": "Shree Siddhivinayak Greentech Industries IPO",
-      "status": "open",
-      "symbol": "SHREESIDHI",
-      "instrument_name": "Shree Siddhivinayak Greentech Industries",
-      "isin": "INE1NVJ01026"
     },
     {
       "ipo_name": "Sri Priyanka Geo Commex IPO",
@@ -58,26 +72,8 @@
   ],
   "skipped_ipos": [
     {
-      "id": "monomark-engineering-india-limited-ipo",
-      "name": "Monomark Engineering (India) IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "a-j-packaging-limited-ipo",
-      "name": "A J Packaging IPO",
-      "status": "upcoming",
-      "missing_fields": [
-        "symbol",
-        "isin"
-      ]
-    },
-    {
-      "id": "matangi-rubber-limited-ipo",
-      "name": "Matangi Rubber IPO",
+      "id": "swara-baby-products-limited-ipo",
+      "name": "Swara Baby Products IPO",
       "status": "upcoming",
       "missing_fields": [
         "symbol",
